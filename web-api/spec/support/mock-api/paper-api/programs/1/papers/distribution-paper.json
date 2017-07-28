@@ -1,0 +1,48 @@
+[
+  {
+    "description": "should_return_distributed_paper_uri",
+    "request": {
+      "uri": "/programs/1/papers",
+      "method": "post",
+      "json": {
+        "makerId": 1,
+        "createTime": 17171121,
+        "programId": 1,
+        "paperName": "new title",
+        "description": "描述",
+        "sections": [
+          {
+            "type": "blankQuizzes",
+            "description": "blank",
+            "items": {
+              "easyCount": 1,
+              "normalCount": 1,
+              "hardCount": 1,
+              "exampleCount": 1
+            }
+          },
+          {
+            "type": "homeworkQuizzes",
+            "description": "homework",
+            "items": [
+              {
+                "id": 1,
+                "uri": "homeworkQuizzes/1"
+              },
+              {
+                "id": 2,
+                "uri": "homeworkQuizzes/2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "response": {
+      "status": 201,
+      "json": {
+        "uri": "programs/1/papers/12"
+      }
+    }
+  }
+]

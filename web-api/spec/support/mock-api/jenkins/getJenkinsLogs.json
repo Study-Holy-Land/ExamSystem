@@ -1,0 +1,13 @@
+[
+  {
+    "description": "should_return_logs",
+    "request": {
+      "uri": "/job/HOMEWORK_SCORING/1/consoleText",
+      "method": "get"
+    },
+    "response": {
+      "status": 201,
+      "text": "success"
+    }
+  }
+]

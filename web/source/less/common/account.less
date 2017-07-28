@@ -1,0 +1,48 @@
+@import "color.less";
+
+.header-right {
+  float: right;
+  display: inline-block;
+  max-width: 200px;
+  padding: 0 20px;
+  .login {
+    margin-top: 17px;
+    @media only screen and (max-width: 600px) {
+      margin-top: 15px;
+    }
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 5px 14px;
+    .register {
+      margin-right: 40px;
+    }
+    a {
+      display: inline-block;
+      cursor: pointer;
+      background: transparent;
+      color: #fff;
+      &:hover {
+        color: #eee;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .dropdown-style {
+    background: none;
+    color: @white;
+    border: none;
+    margin-top: 20px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    line-height: 35px;
+  }
+  .dropdown-menu {
+    min-width: 130px;
+    top: 70%;
+  }
+}

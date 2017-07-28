@@ -1,0 +1,103 @@
+---
+- hosts: "{{ variable_host }}"
+
+  tasks:
+  - name: copy
+    copy:
+      src: "{{ item }}"
+      dest: "{{ project_root }}"
+    with_fileglob:
+      - ~/recruiting-system/*.7z
+    tags:
+      - copy
+
+  - name: unzip
+    shell: /usr/bin/7z x -y  {{ item }} -o./ && chown -R ubuntu:ubuntu .
+    with_items:
+      - "assembly.7z"
+      - "web-api.7z"
+      - "teacher-admin-web.7z"
+      - "web.7z"
+      - "paper-api.7z"
+    become: true
+    args:
+      chdir: "{{ project_root }}"
+    tags:
+      - unzip
+
+
+  - name: delete zip
+    shell: rm {{ item }}
+    with_items:
+      - "assembly.7z"
+      - "web-api.7z"
+      - "teacher-admin-web.7z"
+      - "web.7z"
+      - "paper-api.7z"
+    args:
+      chdir: "{{ project_root }}"
+
+  - name: run docker-compose up -d
+    shell: docker-compose up -d
+    args:
+      chdir: "{{ project_root }}assembly"
+    tags:
+      - docker
+
+  - name: gradle migrate for paper-api
+    shell: ./gradlew flywaymigrate
+    args:
+      chdir: "{{ project_root }}paper-api"
+    notify:
+      - restart paper-api
+    tags:
+      - paper
+
+  - name: restore jenkins configration
+    shell: /usr/bin/docker exec -d assembly_jenkins-dind_1 sh -c " rm -rf /var/jenkins_home/jobs/{{ item.name }}; mkdir /var/jenkins_home/jobs/{{ item.name }}; "
+          && /usr/bin/docker cp "{{ project_root }}assembly/jenkins/{{ item.name }}/config.xml" "assembly_jenkins-dind_1:/var/jenkins_home/jobs/{{ item.name }}"
+    with_items:
+      - { name: ADD_HOMEWORK }
+      - { name: ADD_IMAGE }
+      - { name: HOMEWORK_SCORING }
+    tags:
+      - config
+
+  - name: restore jenkins plugins
+    shell: /usr/bin/docker cp "{{ project_root }}assembly/jenkins/plugins/{{ item }}" "assembly_jenkins-dind_1:/var/jenkins_home/plugins/"
+    with_items:
+      - envinject.hpi
+      - git.hpi
+      - postbuildscript.hpi
+      - structs.hpi
+      - workflow-step-api.hpi
+      - flexible-publish.hpi
+      - junit.hpi
+      - run-condition.hpi
+      - token-macro.hpi
+      - git-client.hpi
+      - matrix-project.hpi
+      - scm-api.hpi
+      - workflow-scm-step.hpi
+    notify:
+    - restart jenkins-dind
+    tags:
+      - restore
+
+  - name: restart web-api 
+    shell: /usr/bin/docker restart assembly_web-api_1
+    tags:
+      - web
+
+  - name: restart nginx
+    shell: /usr/bin/docker restart assembly_nginx_1
+    tags:
+      - nginx
+
+  handlers:
+    - name: restart paper-api
+      shell: /usr/bin/docker restart assembly_paper-api_1
+    - name: restart jenkins-dind
+      shell: /usr/bin/docker restart assembly_jenkins-dind_1
+
+      

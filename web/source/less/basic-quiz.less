@@ -1,0 +1,68 @@
+@import "common/main";
+
+body {
+  background-color: @pale-white;
+}
+
+#basic-quiz {
+
+  .header-major;
+  header {
+    margin-bottom: 14px;
+  }
+
+  #basic-quiz .basic-quiz-border {
+    position: relative;
+    background-color: #FFFFFF;
+    min-height: 630px;
+  }
+
+  .basic-quiz-border {
+    position: relative;
+    background-color: @white;
+    min-height: 630px;
+  }
+
+  .sidebar {
+    background-color: @white;
+    min-height: 450px;
+    .title {
+      margin: 0;
+      text-align: center;
+      & > div {
+        margin: 7px;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .confirm {
+        padding: 30px 10px;
+      }
+    }
+  }
+
+  .description {
+    margin: 20px 20px 10px 20px;
+    min-height: 20px;
+    word-wrap: break-word;
+  }
+
+  .answer {
+    margin: 0 15px 15px 15px;
+    width: 50%;
+  }
+
+  .input-left {
+    padding-left: 15px;
+  }
+
+  .answer-radio {
+    margin: 0 15px 5px 15px;
+  }
+
+  .quiz-border {
+    border: 1px solid #e3e3e3;
+  }
+
+}

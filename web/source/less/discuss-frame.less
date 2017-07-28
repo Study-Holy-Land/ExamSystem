@@ -1,0 +1,77 @@
+@import "common/main";
+
+body {
+  font-size: 15px;
+}
+
+div.discuss-part {
+  margin-bottom: 10px;
+}
+
+div.discuss-type {
+  margin: 15px 0 45px 0;
+  position: relative;
+  text-align: center;
+  .discuss-item {
+    display: inline-block;
+    width: 44px;
+    float: left;
+    cursor: pointer;
+
+    margin-right: 8px;
+    font-size: 14px;
+  }
+}
+
+.discuss-frame {
+  padding: 2px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid @blue;
+  .discuss-arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid @blue;
+    position: absolute;
+    top: -7px;
+    z-index: 1;
+    left: 15px;
+  }
+  .discuss-arrow:before {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: -7px;
+    z-index: 1;
+  }
+  .preview {
+    left: 67px;
+  }
+  .discuss-textarea {
+    display: block;
+    min-height: 70px;
+    outline: none;
+    border: none;
+    resize: none;
+    width: 100%;
+  }
+  .discuss-button {
+    text-align: right;
+    padding: 5px 7px;
+    background: #fff;
+    border-top: 1px solid #efefef;
+    a {
+      display: inline-block;
+      outline: none;
+      margin-right: 20px;
+    }
+  }
+}

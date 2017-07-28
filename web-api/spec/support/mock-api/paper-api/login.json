@@ -1,0 +1,76 @@
+[
+  {
+    "description": "should_login_in_when_give_test_account",
+    "request": {
+      "uri": "/login",
+      "method": "post",
+      "json": {
+        "email": "test@163.com",
+        "password": "25d55ad283aa400af464c76d713c07ad"
+      }
+    },
+    "response": {
+      "json": {
+        "email": "test@163.com",
+        "id": 1,
+        "mobilePhone": "18798037893",
+        "role": [
+          0,
+          1
+        ],
+        "userInfo": {
+          "uri": "users/1"
+        },
+        "userName": "章三"
+      }
+    }
+  },
+  {
+    "description": "should_login_in_as_admin_when_give_test_account",
+    "request": {
+      "uri": "/login",
+      "method": "post",
+      "json": {
+        "email": "admin@admin.com",
+        "password": "25d55ad283aa400af464c76d713c07ad"
+      }
+    },
+    "response": {
+      "json": {
+        "email": "admin@admin.com",
+        "id": 7,
+        "mobilePhone": "18711110000",
+        "role": [
+          9
+        ],
+        "userInfo": {
+          "uri": "users/7"
+        },
+        "userName": "赵思"
+      }
+    }
+  },
+  {
+    "description": "should_login_in_as_admin_when_give_test_account",
+    "request": {
+      "uri": "/login",
+      "method": "post",
+      "json": {
+        "email": "teacher@teacher.com",
+        "password": "25d55ad283aa400af464c76d713c07ad"
+      }
+    },
+    "response": {
+      "json": {
+        "email": "teacher@teacher.com",
+        "id": 8,
+        "mobilePhone": "18711110001",
+        "role": [1],
+        "userInfo": {
+          "uri": "users/8"
+        },
+        "userName": "孙衵"
+      }
+    }
+  }
+]

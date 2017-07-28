@@ -1,0 +1,61 @@
+#studentList-header {
+  padding: 0 15px 0 15px;
+
+  .header {
+    padding-top: 10px;
+
+    .table-header {
+      background-color: #438EB9;
+      color: #FFF;
+      font-size: 14px;
+      line-height: 38px;
+      padding-left: 12px;
+      margin-bottom: 1px;
+      clear: right;
+    }
+  }
+}
+
+#studentList-form {
+  padding: 0 15px 0 15px;
+  .table-form {
+    padding: 0;
+    .form-title {
+      color: #707070;
+      background: repeat-x #F2F2F2;
+    }
+    .select-all {
+      cursor: pointer;
+    }
+    .table-striped {
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: #E9F1F6;
+        }
+        tr {
+          td {
+            text-align: center;
+          }
+          .not-active {
+            pointer-events: none;
+            cursor: not-allowed;
+            color: grey;
+          }
+        }
+      }
+      thead {
+        color: #707070;
+        background-color: #F2F2F2;
+        tr {
+          th {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .table-bordered {
+      margin-bottom: 0;
+    }
+  }
+}

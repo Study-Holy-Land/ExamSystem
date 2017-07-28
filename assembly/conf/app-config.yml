@@ -1,0 +1,14 @@
+default:
+  port: 3000
+  database: 'mongodb://mongodb/twars'
+  apiServer: 'http://jetty-api:8080/jetty-api/'
+  appServer: 'http://node-app:3000/'
+  taskServer: 'http://node-task-queue:4000/'
+  sessionTtl: 3600 # 60(MINUTE_PER_HOUR) * 60(SECONDS_PER_MINUTE)
+  staticFileServer: '/fs/'
+  emailServer: 'http://54.222.191.27:8888'
+  emailAccount: 'twarss@163.com'
+  emailPassword: 'ssww123456'
+  gitHubToken: 'Basic dHdhcnM6c3cxMjM0NTY3OA=='
+test:
+  port: 5000

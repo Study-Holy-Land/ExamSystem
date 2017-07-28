@@ -1,0 +1,78 @@
+[
+  {
+    "description": "should_return_all_papers_when_request_papers",
+    "request": {
+      "uri": "/papers",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "paperInfo": [
+          {
+            "createTime": 2016,
+            "description": "simple",
+            "id": 1,
+            "makerId": 1,
+            "paperName": "简单的试卷",
+            "programId": 1,
+            "uri": "papers/1"
+          },
+          {
+            "createTime": 2016,
+            "description": "standard",
+            "id": 2,
+            "makerId": 2,
+            "paperName": "一般的试卷",
+            "programId": 3,
+            "uri": "papers/2"
+          }
+        ],
+        "paperCount": 10
+      }
+    }
+  },
+  {
+    "description": "add_a_new_paper",
+    "request": {
+      "uri": "/papers/",
+      "method": "post",
+      "json": {
+        "makerId": 6,
+        "paperName": "php",
+        "programId": 1,
+        "sections": {
+          "blankQuizzes": {
+            "quizType": "blankQuizzes",
+            "description": "no",
+            "items": [
+              {
+                "easyCount": 1,
+                "normalCount": 2,
+                "hardCount": 3,
+                "exampleCount": 1
+              }
+            ]
+          },
+          "homeworkQuizzes": {
+            "quizType": "blankQuizzes",
+            "description": "homework",
+            "quizzes": [
+              {
+                "definitions": {
+                  "description": "lalala",
+                  "templateRepository": "HTTP://PHP",
+                  "evaluateScript": "test"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "response": {
+      "json": {
+        "uri": "papers/12"
+      }
+    }
+  }
+]

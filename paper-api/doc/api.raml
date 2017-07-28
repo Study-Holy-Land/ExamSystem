@@ -1,0 +1,887 @@
+#%RAML 1.0
+title: TWARecurting API
+description:
+version: V1
+baseUri: http://api.bronzesword.com/
+/register:
+  post:
+    body:
+      application/x-www-form-urlencoded:
+        properties:
+          mobilePhone: string
+          email: string
+          password: string
+    responses:
+      201:
+        body:
+          application/json:
+            properties:
+              id: number
+              user:
+                properties:
+                  uri: string
+              userInfo:
+                properties:
+                  uri: string
+/login:
+  post:
+    body:
+      application/x-www-form-urlencoded:
+        properties:
+          email/mobilePhone: string
+          password: string
+    responses:
+      200:
+        headers:
+          token: string
+        body:
+          application/json:
+            properties:
+              id: number
+              userInfo:
+                properties:
+                  uri: string
+
+/logout:
+  post:
+    headers:
+      token: string
+    body:
+      application/json:
+        properties:
+          userId: number
+    responses:
+      201:
+
+/users:
+  get:
+    description: 在获取所有用户信息
+    queryParameters:
+      page: integer # deault : 1
+      pageSize: integer # default :15
+      email: string
+      mobilePhome: string
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              totalCount : integer
+              items :
+                properties:
+                  []:
+                  email: string
+                  mobilePhone: string
+                  role: array
+                  userName: string
+  post:
+    description: 在 admin 权限下创建一个新用户
+    body:
+      application/json:
+        properties:
+          email: string
+          mobilePhone: string
+          password: string
+          role: array
+          userName: string
+    responses:
+      201:
+  put:
+    queryParameters:
+      email: string
+    description: 在 admin 权限下，更新用户权限
+    body:
+      application/json:
+        properties:
+          email: string
+          mobilePhone: string
+          role: array
+          userName: string
+    responses:
+      204:
+  /verification:
+    get:
+      queryParameters:
+        field: string
+        value: string
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                uri: string
+  /{id}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                id: integer
+                email: string
+                mobilePhone: string
+    /programs/{programId}:
+      post:
+        responses:
+          201:
+            body:
+              application/json:
+                properties:
+                  status: number
+
+    /logicPuzzle:
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                properties:
+                  correctNumber: integer
+                  itemNumber: integer
+                  startTime: integer
+                  endTime: integer
+    /detail:
+      get:
+        description: 获取用户信息
+        body:
+          application/json:
+            properties:
+              userList:
+                properties:
+                  []:
+                  userId: integer
+                  school: string
+                  name: string
+                  gender: string
+                  major: string
+                  degree: string
+                  birthday: integer
+                  email: string
+                  mobilePhone: string
+
+      put:
+        description: 提交用户的详细信息
+        body:
+          application/json:
+            properties:
+              userId: integer
+              school: string
+              name: string
+              gender: string
+              major: string
+              degree: string
+        responses:
+          200:
+            body:
+              application/json:
+                properties:
+                  userInfo:
+                    properties:
+                      uri: string
+    /programs:
+      get:
+        description: 获取指定用户对应的program列表
+        responses:
+          200:
+            body:
+              application/json:
+                 properties:
+                   programIds:
+                       integer[]
+
+    /password:
+      put:
+        description: 修改用户密码
+        body:
+          application/json:
+            properties:
+              oldPassword: string
+              password: string
+        responses:
+          200:
+            body:
+              application/json:
+                properties:
+                  uri: string
+  /password:
+    /retrieve:
+      get:
+        queryParameters:
+          field: string
+          value: string
+        responses:
+          200:
+           body:
+             application/json:
+               properties:
+                 status: number
+                 token: string
+    /reset:
+      post:
+        body:
+          application/json:
+            properties:
+              newPassword: string
+              token: string
+        responses:
+          201:
+            body:
+              application/json:
+                properties:
+                  status: number
+
+
+/scoresheets:
+  get:
+    description: 得到所有的成绩单
+    responses:
+        200:
+          body:
+            application/json:
+              properties:
+                uris: string[]
+
+  post:
+    description: 考试完毕，提交成绩单
+    body:
+      application/json:
+        properties:
+          examerId: integer
+          paperId: integer
+
+          blankQuizSubmits:
+            properties:
+              []:
+                properties:
+                  blankQuizId: integer
+                  startTime: integer
+                  endTime: integer
+                  itemPosts:
+                    properties:
+                      []:
+                        properties:
+                          answer: string
+                          quizItemId: integer
+          homeworkSubmits:
+            properties:
+              []:
+                properties:
+                  homeworkQuizId: integer
+                  startTime: integer
+                  homeworkSubmitPostHistory:
+                    properties:
+                      []:
+                        properties:
+                          commitTime: integer
+                          homeworkURL: string
+                          version: string
+                          branch: string
+                          status: number
+                          result: string
+
+    responses:
+      201:
+        body:
+          application/json:
+            type: object
+            properties:
+              uri: string
+
+  /{scoresheetId}:
+    get:
+      description: 获取成绩单的细节
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                examer:
+                  properties:
+                    uri: string
+                paper:
+                  properties:
+                    uri: string
+                blankQuizSubmits[]:
+                  properties:
+                    blankQuiz:
+                      properties:
+                       uri: string
+                    startTime: integer
+                    endTime: integer
+                    itemPosts[]:
+                      properties:
+                        answer: string
+                        quizItem:
+                          properties:
+                            uri: string
+                homeworkSubmits[]:
+                  properties:
+                    homeworkQuiz:
+                      properties:
+                        uri: string
+                    startTime: integer
+                    homeworkSubmitPostHistory[]:
+                      properties:
+                        homeworkURL: string
+                        branch: string
+                        version: string
+                        status: number
+                        commitTime: integer
+
+/papers:
+  get:
+    queryParameters:
+      page: integer
+      pageSize: integer
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              papers:
+                 properties:
+                   []:
+                   uri: string
+                   makeId: integer
+                   paperName: string
+                   description: string
+                   createTime: string
+                   isDistribution: boolean
+              paperCount: integer
+
+  post:
+    description: 提交一份考卷定义，含section定义
+    body:
+      application/json:
+        properties:
+          makerId: integer
+          programId: integer
+          paperName: string
+          sections:
+            properties:
+              blankQuizzes:
+                properties:
+                  description: string
+                  quizType: string
+                  items[]:
+                    properties:
+                      easyCount: integer
+                      normalCount: integer
+                      hardCount: integer
+
+              homeworkQuizzes:
+                properties:
+                  description: string
+                  quizType: string
+                  quizzes[]:
+                    properties:
+                      definitions[]:
+                        properties:
+                          templateRepository: string
+                          evaluateScript: string
+                          description: string
+
+    responses:
+      201:
+        body:
+          application/json:
+            properties:
+              uri: string
+  /{paperId}:
+    get:
+      description: 获取一份考卷定义的细节，含section的细节
+      responses:
+        200:
+          body:
+            # description: quizzes的顺序是有含义的，所以不能乱序
+            application/json:
+              properties:
+                id: integer
+                sections:
+                  properties:
+                    []:
+                      properties:
+                        id: integer
+                        description: string
+                          # description: Markdown String to discribe what happen in the future
+                        type: string
+                        quizzes:
+                          properties:
+                            []:
+                              properties:
+                                id: integer
+                                definition_uri: string
+                                [items_uri]: string
+                        maker_uri: string
+
+    put:
+      description: 添加对指定paper的操作
+      body:
+        application/json:
+          properties:
+            operationType: string # default enum('DELETE','DISTRIBUTION','UNDISTRIBUTION')
+            operatorId: integer
+            operatingTime: integer
+            paperId: integer
+      responses:
+        204:
+          description: 操作成功
+        412:
+          description: 操作失败，不满足前提条件
+  /users:
+    /{examerId}:
+      get:
+        description: 获取某张试卷下某个用户的homework题的所有记录
+        responses:
+          200:
+            body:
+              application/json:
+                properties:
+                  items:
+                    properties:
+                      []:
+                      result: string
+                      homeworkQuizId: integer
+                      commitTime: integer
+                      startTime: integer
+                      id: integer
+                      homeworkSubmitId: integer
+                      userAnswerRepo: string
+                      version: string
+                      branch: string
+                      status: integer
+                      examerId: integer
+/blankQuizzes:
+  get:
+    # description: 获得所有的填空题定义
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              blankQuizzes[]:
+                properties:
+                  uri: string
+  post:
+    description: 提交一份填空题定义
+    body:
+      application/json:
+        properties:
+          hardCount: integer
+          normalCount: integer
+          easyCount: integer
+          exampleCount: integer
+    responses:
+      201:
+        body:
+          application/json:
+            properties:
+              id: integer
+              uri: string
+  /{sectionId}:
+    get:
+      #  description: 获取一份填空题的定义
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                id: integer
+                  # description: class name of generator
+                hardCount: integer
+                normalCount: integer
+                easyCount: integer
+                exampleCount: integer
+  /{blankQuizId}/items:
+    get:
+      # description: 获取一组题目的内容
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                  quizItems:
+                    properties:
+                        []:
+                          properties:
+                            id: integer
+                            initializedBox: string
+                            question: string
+                            description: string
+                            chartPath: string
+                          # 根据前台需要的数据把剩下的补完，不能有正确答案
+                  exampleItems:
+                    properties:
+                        []:
+                          properties:
+                            id: integer
+                            initiallizedBox: string
+                            question: string
+                            desciption: string
+                            chartPath: string
+                            answer: string
+
+/quizItems:
+  get:
+    description: 获取所有的题目项定义
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              uri: string
+  post:
+    description: 提交一份题目项定义
+    body:
+      application/json:
+        properties:
+          id: integer
+          initializedBox: string
+          descriptionZh: string
+          chartPath: string
+          stepsString: string
+          count: integer
+          questionZh: string
+          stepsLength: integer
+          maxUpdateTimes: integer
+    responses:
+      201:
+        body:
+          application/json:
+            properties:
+              uri: string
+  /{quizItemId}:
+    get:
+      description: 获得一份题目项定义的细节
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                id: integer
+                initializedBox: string
+                question: string
+                description: string
+                chartPath: string
+  /examples:
+    get:
+      description: 获得一count最小的前两道例题
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                id: integer
+                initializedBox: string
+                stepsString: string
+                count: integer
+                question: string
+                questionZh: string
+                stepsLength: integer
+                maxUpdateTimes: integer
+                answer: string
+                description: string
+                descriptionZh:: string
+                chartPath: string
+                infoPath: string
+
+/homeworkQuizzes:
+  get:
+    description: 获取查询条件
+    queryParameters:
+      homeworkName: string
+      type: string
+      page: integer
+      pageSize: integer
+    responses:
+          200:
+            body:
+              application/json:
+                properties:
+                  homeworkQuizzes:
+                    properties:
+                      []:
+                      id: integer
+                      description: string
+                      evaluateScript: string
+                      templateRepository: string
+                      makerName: string
+                      createTime: integer
+                      homeworkName: string
+                      type: string
+                      answerPath: string
+                      stackId: string
+                      uri:  string
+  post:
+    description: 提交一份homework题目定义
+    body:
+      application/json:
+        properties:
+          description: string
+          evaluateScript: string
+          templateRepository: string
+          makerId: integer
+          createTime: integer
+          homeworkName: string
+          type: string
+          answerPath: string
+    responses:
+      201:
+        body:
+          application/json:
+            properties:
+              uri: string
+
+  /{homeworkQuizIds}:
+    get:
+      description: 获得指定 id 列表的homework题目定义
+      queryParameters:
+          ids: string
+      responses:
+          200:
+            body:
+              application/json:
+                  properties:
+                    homeworkQuizzes:
+                          properties:
+                            []:
+                            uri: string
+    put:
+      description: 添加对指定homeworkQuiz的操作
+      body:
+        application/json:
+          properties:
+            operationType: string # default enum('DELETE','DISTRIBUTION','UNDISTRIBUTION')
+            operatorId: integer
+            operatingTime: integer
+            homeworkQuizId: integer
+      responses:
+        204:
+          description: 操作成功
+        412:
+          description: 操作失败，不满足前提条件
+
+/programs:
+  get:
+    description: 获取所有programs信息
+    body:
+      application/json:
+        properties:
+          programs:
+            properties:
+              id: integer
+              name: string
+  post:
+    description: 管理员权限下创建一个program
+    body:
+      application/json:
+        properties:
+          name: string
+    responses:
+      201:
+        body:
+          application/json:
+            properties:
+              id: integer
+  /{programId}:
+        put:
+          description: 管理员权限下修改一个program
+          body:
+            application/json:
+              properties:
+                name: string
+          responses:
+            204:
+        /users:
+          get:
+            description: 通过programId获取对应users列表信息
+            body:
+              application/json:
+                properties:
+                  userUri: string[]
+
+        /papers:
+          post:
+            description: 通过programId获取对应paper列表信息
+            body:
+              application/json:
+                example:
+                 {
+                  "makerId": 1,
+                  "createTime": 111111,
+                  "programId": 1,
+                  "paperName": "new title",
+                  "description": "描述",
+                  "sections": [
+                    {
+                      "type": "blankQuizzes",
+                      "description": "blank",
+                      "items": {
+                        "easyCount": 1,
+                        "normalCount": 1,
+                        "hardCount": 1,
+                        "exampleCount": 1
+                      }
+                    },
+                    {
+                      "type": "homeworkQuizzes",
+                      "description": "homework",
+                      "items": [
+                        {
+                          "id": 1,
+                          "uri": "homeworkQuizzes/1"
+                        },
+                        {
+                          "id": 2,
+                          "uri": "homeworkQuizzes/2"
+                        }
+                     ]
+                   }
+                 ]
+               }
+            responses:
+              201:
+                body:
+                  application/json:
+                    properties:
+                      uri: string
+          get:
+            description: 通过programId获取对应paper列表信息
+            responses:
+                200:
+                  body:
+                    application/json:
+                        properties:
+                          paperList:
+                              properties:
+                                []:
+                                paperName: string
+                                description: string
+                                createTime: string
+                                programId: integer
+                                uri: string
+
+
+        /paper:
+            /{paperId}:
+                get:
+                  description: 获取指定 program 下的指定 paper
+                  responses:
+                    200:
+                      body:
+                        application/json:
+                            properties:
+                                id: integer
+                                programId: integer
+                                sections:
+                                  properties:
+                                    []:
+                                    description: string
+                                    quizzes:
+                                      properties:
+                                        []:
+                                          properties:
+                                            definition_uri: string
+                                            items_uri: string
+                                    sectionType: string
+
+
+
+                post:
+                    description: 对指定 program 下的指定 paper 进行操作
+                    body:
+                          application/json:
+                            properties:
+                              operationType:
+                                enum: ['DELETE','DISTRIBUTION','UNDISTRIBUTION']
+                              paperId: integer
+                              operatingTime: integer
+                    responses:
+                      204:
+/stacks:
+  get:
+    description: 获取所有的技术栈
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              items:
+                properties:
+                  []:
+                  stackId: string
+                  title: string
+                  description: string
+                  definition: string
+
+  post:
+    description: 添加一个技术栈
+    body:
+      application/json:
+        properties:
+          title: string
+          description: string
+          definition: string
+    responses:
+      201:
+        body:
+          application/json:
+            properties:
+              stackId: integer
+              uri: string
+
+  /{stackId}:
+    get:
+      description: 获取一个技术栈
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                stackId: string
+                title: string
+                description: string
+                definition: string
+/baisc-quizzes:
+  post:
+    description: 添加基础题
+    body:
+      application/json:
+        properties:
+            []:
+            description: string
+            type: string
+            answer: string
+            choices: string
+
+    responses:
+      201:
+
+/auth/thirdParty:
+  /weChat:
+    post:
+      description: 第三方登录
+      body:
+        application/json:
+          properties:
+            schoolCity: string
+            gender: string
+            degree: string
+            userName: string
+            userId: integer
+            schoolProvince: string
+            mobilePhone: string
+            major: string
+            school: string
+            entranceYear: string
+            name: string
+            thirdPartyUserId: integer
+            email: string
+            programId: integer
+            password: string
+      responses:
+        201:
+          body:
+            application/json:
+              properties:
+                uri : string #{uri : users/userId}

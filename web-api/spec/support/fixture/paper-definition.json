@@ -1,0 +1,411 @@
+[
+  {
+    "_id": "5829958a7007c23870a1d68a",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "isDeleted": false,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "java",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz",
+        "_id": "58326fad625a2627e08232e2"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz",
+        "_id": "58326fad625a2627e08232e3"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d681",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "java",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d682",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "c#",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d685",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d683",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d684",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d686",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d687",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d688",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d689",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  },
+  {
+    "_id": "5829958a7007c23870a1d690",
+    "programId": 1,
+    "isDistributed": false,
+    "distributedTime": null,
+    "makerId": 1,
+    "description": "这是描述",
+    "paperName": "第一份试卷",
+    "createTime": "17171.12345787",
+    "updateTime": "17171.23456784",
+    "isDeleted": false,
+    "sections": [
+      {
+        "title": "逻辑题",
+        "quizzes": {
+          "easy": 1,
+          "normal": 1,
+          "hard": 1
+        },
+        "type": "logicQuiz"
+      },
+      {
+        "title": "编程题",
+        "quizzes": [
+          {
+            "id": 1,
+            "uri": "homeworkQuizzes/1"
+          },
+          {
+            "id": 2,
+            "uri": "homeworkQuizzes/2"
+          }
+        ],
+        "type": "homeworkQuiz"
+      }
+    ]
+  }
+]

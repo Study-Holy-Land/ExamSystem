@@ -1,0 +1,70 @@
+#%RAML 1.0
+title: TWARecurting API
+description:
+version: V1
+baseUri: http://api.bronzesword.com/teacher-admin-web/
+
+/users:
+  /search:
+    get:
+      description: 获取查询条件
+      queryParameters:
+        privilege: string
+        email: string
+        page: integer
+        pageSize: integer
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                usersDetail:
+                  properties:
+                    []:
+                    userId: integer
+                    school: string
+                    name: string
+                    gender: string
+                    major: string
+                    degree: string
+                    birthday: integer
+                    email: string
+                    mobilePhone: string
+        404:
+          description: 没有这个字段
+  /{studentId}:
+     /mentors:
+         get:
+           description: 根据student的id获取对应的所有mentor
+           responses:
+             200:
+               body:
+                 application/json:
+                   properties:
+                     mentorIds:
+                           properties:
+                             []:
+                             type: number
+  /{mentorId}:
+      /mentees:
+          get:
+            description: 根据mentor的id获取对应的所有mentee
+            responses:
+              200:
+                body:
+                  application/json:
+                    properties:
+                      studentIds:
+                            properties:
+                              []:
+                              type: number
+
+
+/relationshipCreating:
+   /{mentorId}/students/{studentId}:
+       post:
+         responses:
+           201:
+             description: 成功建立关系
+           403:
+             description: 关系已存在，拒绝执行

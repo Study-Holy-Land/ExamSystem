@@ -1,0 +1,27 @@
+@import "common/color.less";
+
+div.dashboard-icon {
+  max-width: 460px;
+  margin: 10px auto;
+  min-width: 300px;
+  text-align: center;
+  a{
+    color: @nice-green;
+  }
+  .icon {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgb(62, 62, 62);
+    > .icon-add {
+      height: 191px;
+      line-height: 230px;
+    }
+    .icon-img {
+      margin-top: 20px;
+      span {
+        font-size: 80px;
+        color: @nice-green;
+      }
+    }
+  }
+}

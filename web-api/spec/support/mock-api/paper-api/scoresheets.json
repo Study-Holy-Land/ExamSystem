@@ -1,0 +1,142 @@
+[
+  {
+    "description": "should_return_all_scoresheets_when_request_scoresheets",
+    "request": {
+      "uri": "/scoresheets",
+      "method": "get"
+    },
+    "response": {
+      "json": [
+        {
+          "uri": "scoresheets/1"
+        },
+        {
+          "uri": "scoresheets/2"
+        },
+        {
+          "uri": "scoresheets/3"
+        },
+        {
+          "uri": "scoresheets/4"
+        }
+      ]
+    }
+  },
+  {
+    "description": "should_add_new_score_sheet",
+    "request": {
+      "uri": "/scoresheets",
+      "method": "post",
+      "json": {
+        "paperId": 3,
+        "examerId": 5
+      }
+    },
+    "response": {
+      "status": 201,
+      "json": {
+        "uri": "scoresheets/5"
+      }
+    }
+  },
+  {
+    "description": "should_add_new_score_sheet_with_homework_quiz_history",
+    "request": {
+      "uri": "/scoresheets",
+      "method": "post",
+      "json":  {
+        "examerId": 1,
+        "paperId": 2,
+        "blankQuizSubmits": [
+          {
+            "blankQuizId": 1,
+            "startTime": 140345676,
+            "endTime": 142345632,
+            "itemPosts": [
+              {
+                "answer": "10",
+                "quizItemId": 3
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "response": {
+      "status": 201,
+      "json": {
+        "uri": "scoresheets/5"
+      }
+    }
+  },
+  {
+    "description": "should_add_new_score_sheet_with_homework_quiz_history",
+    "request": {
+      "uri": "/scoresheets",
+      "method": "post",
+      "json": {
+        "examerId": 1,
+        "paperId": 2,
+        "homeworkQuizSubmits": [
+          {
+            "homeworkQuizId": 1,
+            "homeworkSubmitPostHistory": [
+              {
+                "_id": "572dcf6f041ccfa51fb3f9cb",
+                "userAnswerRepo": "http://test.git",
+                "branch": "master",
+                "version": "asdasdfasdf",
+                "__v": 0,
+                "commitTime": 2345678,
+                "result": "\n����^",
+                "status": 5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "response": {
+      "status": 201,
+      "json": {
+        "uri": "scoresheets/5"
+      }
+    }
+  },
+  {
+    "description": "should_add_new_score_sheet_with_homework_quiz_history",
+    "request": {
+      "uri": "/scoresheets",
+      "method": "post",
+      "json": {
+        "examerId": 1,
+        "paperId": 2,
+        "homeworkQuizSubmits": [
+          {
+            "homeworkQuizId": 1,
+            "homeworkSubmitPostHistory": [
+              {
+                "_id": "572dcf6f041ccfa51fb3f9cb",
+                "userAnswerRepo": "http://test.git",
+                "branch": "master",
+                "version": "asdasdfasdf",
+                "__v": 0,
+                "commitTime": 2345678,
+                "result": "OK!",
+                "status": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "response": {
+      "status": 201,
+      "json": {
+        "uri": "scoresheets/5"
+      }
+    }
+  }
+]
+
+

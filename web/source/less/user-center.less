@@ -1,0 +1,230 @@
+@import "common/main";
+
+body {
+  background-color: @white;
+}
+
+#tabs {
+  overflow-x: hidden;
+  .table {
+    .table-header {
+      background-color: #f5f9fc;
+    }
+    margin-top: 15px;
+    margin-left: 50px;
+    width: 90%;
+  }
+
+  .dataTable-pagination {
+    text-align: right;
+  }
+  .pagination {
+    margin: 0 12px;
+    display: inline-block;
+    li {
+      display: inline;
+      a {
+        border-radius: 0
+      }
+    }
+  }
+
+  .agree {
+    margin-right: 10px;
+  }
+}
+
+#user-center {
+  .header-major;
+  .sidebar,
+  .content {
+    border-left: 2px solid @light-grey;
+    background-color: @white;
+    height: 600px;
+    margin-left: -10px;
+
+    .add-program-info {
+      top: 5%;
+      text-align: center;
+      right: 40%;
+      position: absolute;
+      z-index: 1000;
+      background: #b0deea;
+      height: 90px;
+      line-height: 90px;
+      width: 20%;
+    }
+  }
+  .show-result {
+    padding: 20px 40px;
+    overflow: scroll;
+    caption {
+      font-size: 20px;
+    }
+  }
+  header {
+    margin-bottom: 0px;
+  }
+  .user-center-nav-icon {
+    font-size: 25px;
+  }
+  .sidebar-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .content-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .list-group {
+    .active {
+      background-color: @nice-green;
+      border-color: @nice-green;
+    }
+  }
+  .btn-info {
+    background: @blue;
+    margin-left: -20px;
+    padding: 2% 10%;
+  }
+  .btn-password-info {
+    color: @white;
+    background: @blue;
+    padding: 3% 65%;
+  }
+  .selected {
+    background: @shallow-blue;
+  }
+  .form-top-height {
+    padding-top: 30px;
+    padding-left: 0px;
+    label {
+      padding-left: 5px;
+    }
+    .gender {
+      margin-right: 5px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .error {
+      margin: 0px;
+      padding: 8px 0px 0px 3px;
+      border: none;
+      background: rgba(255, 255, 255, 0);
+    }
+    .select {
+      border: 1px solid @deep-red;
+    }
+    .school-info {
+      padding: 0px;
+    }
+  }
+  .input-calendar {
+    margin-right: 0px;
+    width: 100%;
+    input {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      height: 34px;
+      padding: 6px 12px;
+    }
+    .calendar {
+      border-color: #a94442;
+    }
+  }
+  .input-calendar-wrapper {
+    padding: 5px 0px;
+  }
+}
+
+.success-prompt {
+  text-align: center;
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+.table-head {
+  background: #f5f9fc;
+}
+
+.table-list {
+  padding: 20px;
+}
+
+.search-mentor-frame {
+  padding-right: -10px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.search-mentor-list {
+  position: absolute;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0;
+
+  ul {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style-type: none;
+    font-weight: bold;
+    width: 100%;
+    padding-left: 13px;
+    &:hover, &:active {
+      background-color: @nice-green;
+      border-radius: 5px;
+    }
+  }
+}
+
+#myTab {
+  .normal-color {
+    color: #555;
+  }
+  .font-color {
+    color: @blue;
+  }
+
+  .fa {
+    margin-right: 5px;
+  }
+
+}
+
+.add-mentor-btn {
+  list-style-type: none;
+  background: @blue;
+  outline: none;
+  border: 1px solid @blue;
+}
+
+.search-mentor-margin {
+  margin-top: 20px;
+}
+
+.search {
+  margin: 0 20px;
+}
+
+.fa-bell, .fa-envelope {
+  margin-top: 18%;
+}
+
+.no-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}

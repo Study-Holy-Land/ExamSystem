@@ -1,0 +1,45 @@
+"姓名","电话","邮箱","编程题题目地址","编程题开始时间","提交作业记录","分析记录","花费时间"
+#!!--
+<%
+var hour = constant.time.HOURS_PER_DAY;
+var mintues = constant.time.MINUTE_PER_HOUR;
+var second = constant.time.SECONDS_PER_MINUTE;
+
+var dayToSecond = second * mintues * hour;
+var hourToSecond = second * mintues;
+var mintuesToSecond = mintues;
+var BREAK_LINE_CODE = 10;
+%>
+<% if (userHomeworkQuizDetails) { %>
+<% userHomeworkQuizDetails.forEach(function(quiz) { %>
+<%= quiz.name %>,
+<%= quiz.mobilePhone %>,
+<%= quiz.email %>,
+<%= quiz.homeworkQuizUri === '' ? '' : config.apiServer + quiz.homeworkQuizUri %>,
+<%= quiz.startTime === '' ? '' : moment.unix(quiz.startTime).format('YYYY-MM-DD HH:mm:ss') %>,
+<%= quiz.userAnswerRepo %>,
+"<%= quiz.result.split(String.fromCharCode(BREAK_LINE_CODE)).join('##') %>",
+<%= calcHomeworkElapsedTime(quiz.elapsedTime) %>
+#!!--
+<% }); %>
+<% } %>
+<%
+function calcHomeworkElapsedTime(elapsedTime) {
+
+  if (!elapsedTime) {
+    return '--';
+  }
+  var elapsedDay = 0;
+  var elapsedHour = 0;
+  var elapsedMintues = 0;
+  var time = elapsedTime;
+
+  elapsedDay = Math.floor(time / dayToSecond);
+  time -= elapsedDay * dayToSecond;
+  elapsedHour = Math.floor(time / hourToSecond);
+  time -= hourToSecond * elapsedHour;
+  elapsedMintues = Math.floor(time / mintuesToSecond);
+
+  return elapsedDay + '天' + elapsedHour + '小时' + elapsedMintues + '分';
+}
+%>

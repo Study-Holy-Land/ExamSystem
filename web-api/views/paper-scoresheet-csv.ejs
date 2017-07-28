@@ -1,0 +1,75 @@
+"姓名","电话","邮箱","来源渠道","学校","专业","学校所在省份","学校所在城市","入学年份","逻辑题准确率","逻辑题是否通过","逻辑题开始时间","逻辑题花费时间","编程题正确率","编程题是否通过","编程题开始时间","编程题花费时间","编程题详情"
+#!!--
+<%
+var hour = constant.time.HOURS_PER_DAY;
+var mintues = constant.time.MINUTE_PER_HOUR;
+var second = constant.time.SECONDS_PER_MINUTE;
+
+var dayToSecond = second * mintues * hour;
+var hourToSecond = second * mintues;
+var mintuesToSecond = mintues;
+
+var LOGICPUZZLE_PASS_RETE = 0.6;
+var HOMEWORK_PASS_RETE = 0.6;
+%>
+<% if (scoresheetInfo !== null) { %>
+<% scoresheetInfo.forEach(function(user) { %>
+<%= user.name %>,
+<%= user.mobilePhone %>,
+<%= user.email %>,
+<%= user.channel %>,
+<%= user.school %>,
+<%= user.major %>,
+<%= user.schoolProvince %>,
+<%= user.schoolCity %>,
+<%= user.entranceYear %>,
+<%= (user.correctNumber / user.itemNumber).toFixed(2) %>,
+<%= (user.correctNumber / user.itemNumber) > LOGICPUZZLE_PASS_RETE ? '是' : '否' %>,
+<%= moment.unix(user.startTime).format('YYYY-MM-DD HH:mm:ss') %>,
+<%= calcLogicPuzzleElapsedTime(user.startTime, user.endTime) %>,
+<% var accuracy = 0; if (user.homeworkItemNumber && user.homeworkItemNumber) {
+  accuracy = (user.homeworkCorrectNumber / user.homeworkItemNumber).toFixed(2);
+} %>
+<%= accuracy %>,
+<%= accuracy > HOMEWORK_PASS_RETE ? '是' : '否' %>,
+<%= user.homeWorkStartTime === undefined ? '--' : moment.unix(user.homeWorkStartTime).format('YYYY-MM-DD HH:mm:ss') %>,
+<%= calcHomeworkElapsedTime(user.elapsedTime) %>,
+<%= config.reportCsvAppServer + 'report/paper/' + user.paperId + '/user/' + user.userId + '/homework-details' %>
+#!!--
+<% }); %>
+<% } %>
+<%
+function calcLogicPuzzleElapsedTime(startTime, endTime) {
+  var time = endTime - startTime;
+
+  var elapsedHour = 0;
+  var elapsedMintues = 0;
+  var elapsedSeconds = 0;
+
+  elapsedHour = Math.floor(time / hourToSecond);
+  time -= hourToSecond * elapsedHour;
+  elapsedMintues = Math.floor(time / mintuesToSecond);
+  time -= mintuesToSecond * elapsedMintues;
+
+  return elapsedHour + '小时' + elapsedMintues + '分' + time + '秒';
+}
+
+function calcHomeworkElapsedTime(elapsedTime) {
+
+  if (!elapsedTime) {
+    return '--';
+  }
+  var elapsedDay = 0;
+  var elapsedHour = 0;
+  var elapsedMintues = 0;
+  var time = elapsedTime;
+
+  elapsedDay = Math.floor(time / dayToSecond);
+  time -= elapsedDay * dayToSecond;
+  elapsedHour = Math.floor(time / hourToSecond);
+  time -= hourToSecond * elapsedHour;
+  elapsedMintues = Math.floor(time / mintuesToSecond);
+
+  return elapsedDay + '天' + elapsedHour + '小时' + elapsedMintues + '分';
+}
+%>

@@ -1,0 +1,84 @@
+@import "common/main";
+
+body {
+  background-color: @pale-white;
+}
+
+#thridParty-userDetail {
+  .header-major;
+  .sidebar,
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .user-remind {
+    padding-top: 100px;
+    text-align: center;
+  }
+  .content {
+    background-color: @white;
+    height: 100%;
+    margin-left: -10px;
+  }
+  .show-result {
+    padding: 20px 40px;
+    overflow: scroll;
+    caption {
+      font-size: 20px;
+    }
+  }
+  .selected {
+    background: @shallow-blue;
+  }
+  .form-top-height {
+    padding-top: 75px;
+    padding-left: 0px;
+    label {
+      padding-left: 5px;
+    }
+    .gender {
+      margin-right: 5px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .error {
+      margin: 0px;
+      padding: 8px 0px 0px 3px;
+      border: none;
+      background: rgba(255, 255, 255, 0);
+    }
+    .select {
+      border: 1px solid @deep-red;
+    }
+    .school-info {
+      padding: 0px;
+    }
+  }
+  .input-calendar {
+    margin-right: 0px;
+    width: 100%;
+    input {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      height: 34px;
+      padding: 2% 48%;
+    }
+    .calendar {
+      border-color: #a94442;
+    }
+  }
+  .input-calendar-wrapper {
+    padding: 5px 0px;
+  }
+  .btn {
+    padding: 2% 48%;
+  }
+}
+
+.success-prompt {
+  text-align: center;
+}
+
+.input-group {
+  position: relative;
+}

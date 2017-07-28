@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "58a6d3e0e2ce096a438ba2a6",
+    "programId": 1,
+    "makerId": 1,
+    "name": "program1",
+    "uriEnable": true,
+    "programCode": "A1234567",
+    "codeEnable": true,
+    "orderEnable": true,
+    "programType": "exam",
+    "description" : "这是program1"
+  },
+  {
+    "_id": "58a6d3e0e2ce096a438ba2a7",
+    "programId": 2,
+    "makerId": 1,
+    "name": "program2",
+    "uriEnable": true,
+    "programCode": "B1234567",
+    "codeEnable": false,
+    "orderEnable": false,
+    "programType": "practice",
+    "description" : "这是program2"
+  }
+]

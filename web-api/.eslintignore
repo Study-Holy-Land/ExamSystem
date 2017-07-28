@@ -1,0 +1,8 @@
+spec/*
+node_modules/*
+coverage/*
+middleware/captcha.js
+models/paper.js
+refresh-shortcurt.js
+config.default.js
+

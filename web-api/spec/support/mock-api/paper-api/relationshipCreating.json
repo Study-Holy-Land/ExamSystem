@@ -1,0 +1,13 @@
+[
+  {
+    "description": "should_create_relationship_between_student_and_mentor",
+    "request": {
+      "uri": "/relationshipCreating/4/students/3",
+      "method": "post"
+    },
+    "response": {
+      "status": 201,
+      "json": {}
+    }
+  }
+]

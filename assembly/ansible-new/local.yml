@@ -1,0 +1,82 @@
+---
+- hosts: "{{ variable_host }}"
+
+  tasks:
+  - name: pull code
+    shell: git pull origin master && git submodule update
+    args:
+      chdir: "{{ project_root }}"
+
+  - name: create recruiting-system directory
+    shell: cd ~ && rm -rf recruiting-system && mkdir recruiting-system recruiting-system/web recruiting-system/teacher-admin-web
+    tags:
+      - create
+
+  - name: install dependencies admin-web && web && web-api
+    shell: cd {{ item }} && yarn install --force
+    with_items:
+      - "{{ project_root }}web"
+      - "{{ project_root }}teacher-admin-web"
+      - "{{ project_root }}web-api"
+
+  - name: webpack admin-web
+    shell: cd {{ project_root }}teacher-admin-web && npm run webpack
+
+  - name: package web
+    shell: cd {{ project_root }}web && npm run package
+
+  - name: copy admin-web && web public
+    shell: cd {{ item }} && cp -r ./public ~/recruiting-system/{{ item }}
+    with_items:
+      - "web"
+      - "teacher-admin-web"
+    args:
+      chdir: "{{ project_root }}"
+
+  - name: modify config.properties
+    template:
+      src: "config.properties.j2"
+      dest: "{{ project_root }}paper-api/src/main/resources/config.properties"
+    tags:
+      - config
+
+  - name: modify gradle.properties
+    template:
+      src: "gradle.properties.j2"
+      dest: "{{ project_root }}paper-api/gradle.properties"
+    tags:
+      - gradle
+
+  - name: modify weChat secret
+    template:
+      src: "weChat-secret.js.j2"
+      dest: "{{ project_root }}web-api/mixin/weChat-secret.js"
+    tags:
+      - config
+
+  - name: modify docker-compose.yml
+    template:
+      src: "docker-compose.yml.j2"
+      dest: "{{ project_root }}assembly/docker-compose.yml"
+
+  - name: gradle war for paper-api
+    shell: ./gradlew war
+    args:
+      chdir: "{{ project_root }}paper-api"
+
+  - name: zip assembly web-api paper-api files
+    shell: /usr/local/bin/7z a -t7z ~/recruiting-system/{{ item }}.7z {{ item }}
+    with_items:
+      - "assembly"
+      - "web-api"
+      - "paper-api"
+    args:
+      chdir: "{{ project_root }}"
+    tags:
+      - zip
+
+  - name: zip web && admin-web
+    shell: cd ~/recruiting-system && 7z a -t7z ./{{ item }}.7z ./{{ item }} && rm -rf {{ item }}
+    with_items:
+      - "web"
+      - "teacher-admin-web"

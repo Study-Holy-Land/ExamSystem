@@ -1,0 +1,72 @@
+[
+  {
+    "include": "spec/support/mock-api/paper-api/papers/1.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/papers/1/user-detail.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/scoresheets.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/papers/1/logic-puzzle.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/users/1.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/users/7.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/login.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/users/1/detail.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/users/7/detail.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/homework-quizzes/1.json"
+  },
+  {
+    "include": "spec/support/mock-api/user-api/groups.json"
+  },
+  {
+    "include": "spec/support/mock-api/jenkins/buildWithParameters.json"
+  },
+  {
+    "include": "spec/support/mock-api/nginx/homework-script/check-readme.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/inspector.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/papers/getAllPapers.json"
+  },
+  {
+    "include": "spec/support/mock-api/user-api/teacher-login.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/homework-quizzes.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/programs/1/papers/distribution-paper.json"
+  },
+  {
+    "include": "spec/support/mock-api/user-api/get-user-program.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/programs/1/papers/getOnePaper.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/homework-quizzes/homeworkStacks.json"
+  },
+  {
+    "include": "spec/support/mock-api/paper-api/relationshipCreating.json"
+  },
+  {
+    "include":"spec/support/mock-api/user-api/get-user-detail.json"
+  }
+]
+

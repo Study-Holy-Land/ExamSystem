@@ -1,0 +1,18 @@
+[docker_host] 
+localhost ansible_connection=local project_root=/home/wangdanna/Documents/work/recruiting-system/
+
+[local_server] 
+localhost ansible_connection=local project_root=/home/wangdanna/Documents/work/recruiting-system/
+
+[remote_server] 
+54.222.191.27 ansible_ssh_user=ubuntu project_root=/home/ubuntu/works/recruiting-system/
+
+[docker_host] 
+localhost ansible_connection=local project_root=/home/wangdanna/Documents/work/recruiting-system/
+
+[local_server] 
+localhost ansible_connection=local project_root=/home/wangdanna/Documents/work/recruiting-system/
+
+[remote_server] 
+54.222.191.27 ansible_ssh_user=ubuntu project_root=/home/ubuntu/works/recruiting-system/
+

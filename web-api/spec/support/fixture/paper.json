@@ -1,0 +1,59 @@
+{
+  "_id": "586df703ad622812ec5e7bb3",
+  "userId": 1,
+  "programId": 1,
+  "paperId": 1,
+  "paperUri": "programs/1/papers/1",
+  "sections": [
+    {
+      "_id": "5866007d7274f8b8a786d200",
+      "quizzes": [
+        {
+          "quizId": "58734a1bbf258418d4c5435a",
+          "_id": "5866007d7274f8b8a786d2e0",
+          "submits": [
+            "58d8a2a7bef22a1429060dc3",
+            "5866007d7274f8b8a786d2e0"
+          ]
+        },
+        {
+          "quizId": "58734a1bbf258418d4c5435b",
+          "_id": "5866007d7274f8b8a786d2e1",
+          "submits": [
+            "5866007d7274f8b8a786d2e0",
+            "5866007d7274f8b8a786d2e0"
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "5866007d7274f8b8a786d201",
+      "quizzes": [
+        {
+          "quizId": "5874592cbe76a32b7cf3b4fb",
+          "_id": "5866007d7274f8b8a786d2e3",
+          "submits": [
+            "5866007d7274f8b8a786d2e0",
+            "5866007d7274f8b8a786d2e0"
+          ]
+        },
+        {
+          "quizId": "5874592cbe76a32b7cf3b4fc",
+          "_id": "5866007d7274f8b8a786d2e4",
+          "submits": [
+            "5866007d7274f8b8a786d2e0",
+            "5866007d7274f8b8a786d2e0"
+          ]
+        },
+        {
+          "quizId": "5874592cbe76a32b7cf3b4fd",
+          "_id": "5866007d7274f8b8a786d2e5",
+          "submits": [
+            "5866007d7274f8b8a786d2e0",
+            "5866007d7274f8b8a786d2e0"
+          ]
+        }
+      ]
+    }
+  ]
+}

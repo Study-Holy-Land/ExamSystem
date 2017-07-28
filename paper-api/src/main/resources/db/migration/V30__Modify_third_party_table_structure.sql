@@ -1,0 +1,1 @@
+ALTER TABLE thirdParty MODIFY COLUMN thirdPartyUserId VARCHAR(128);

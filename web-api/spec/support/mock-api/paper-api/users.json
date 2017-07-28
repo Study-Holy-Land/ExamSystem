@@ -1,0 +1,93 @@
+[
+  {
+    "description": "should_return_user_id_by_email",
+    "request": {
+      "uri": "/users",
+      "method": "get",
+      "query": {
+        "field": "email",
+        "value": "test@163.com"
+      }
+    },
+    "response": {
+      "json": {
+        "items": [
+          {
+            "email": "teacher@teacher.com",
+            "id": 8,
+            "mobilePhone": "18711110001",
+            "role": [
+              1
+            ],
+            "userName": "孙衵"
+          },
+          {
+            "email": "admin@admin.com",
+            "id": 7,
+            "mobilePhone": "18711110000",
+            "role": [
+              9
+            ],
+            "userName": "赵思"
+          },
+          {
+            "email": "z@z.com",
+            "id": 6,
+            "mobilePhone": "18291895012",
+            "role": [
+              2
+            ],
+            "userName": "张梦"
+          },
+          {
+            "email": "lwj@qq.com",
+            "id": 5,
+            "mobilePhone": "18740362964",
+            "role": [
+              3
+            ],
+            "userName": "陈有"
+          },
+          {
+            "email": "ydp@qq.com",
+            "id": 4,
+            "mobilePhone": "18730304826",
+            "role": [
+              4
+            ],
+            "userName": "马红"
+          },
+          {
+            "email": "wjj@qq.com",
+            "id": 3,
+            "mobilePhone": "18740404040",
+            "role": [
+              1
+            ],
+            "userName": "王五"
+          },
+          {
+            "email": "test2@qq.com",
+            "id": 2,
+            "mobilePhone": "18087839393",
+            "role": [
+              null
+            ],
+            "userName": "李四"
+          },
+          {
+            "email": "test@163.com",
+            "id": 1,
+            "mobilePhone": "18798037893",
+            "role": [
+              0,
+              1
+            ],
+            "userName": "章三"
+          }
+        ],
+        "totalCount": 8
+      }
+    }
+  }
+]

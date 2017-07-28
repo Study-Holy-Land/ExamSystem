@@ -1,0 +1,39 @@
+{
+  "task": {
+    "addHomework": "http://localhost:8088/job/ADD_HOMEWORK/buildWithParameters",
+    "buildImage": "http://localhost:8088/job/ADD_IMAGE/buildWithParameters",
+    "callback_url": "http://10.22.64.24/api/stack-definitions",
+    "user": "admin",
+    "password": "admin",
+    "taskApi": "http://10.205.125.61:9090/job/HOMEWORK_SCORING/buildWithParameters",
+    "hookUrl": "http://10.22.64.24/api",
+    "callbackTaskUrl": "http://10.22.64.24/api/homework/scoring",
+    "getJenkinsLogs": "http://localhost:8088/job/"
+  },
+  "port": 3000,
+  "database": "mongodb://mongo/twars",
+  "paperApiServer": "http://localhost:8080/paper-api/",
+  "userApiServer": "http://user-api:8080/user-api/",
+  "reportCsvAppServer": "http://192.168.99.100:8888/api/",
+  "appServer": "http://localhost:3000/",
+  "nginxServer": "http://localhost/fs",
+  "staticFileServer": "http://localhost/fs/",
+  "sessionTtl": 3600,
+  "emailServer": "192.168.99.100:8888",
+  "emailAccount": "twarss@163.com",
+  "emailPassword": "ssww123456",
+  "gitHubToken": "Basic dHdhcnM6c3cxMjM0NTY3OA==",
+  "QAInfoAddress": "",
+  "globalVars": {
+    "featureToggle": {
+      "che": true
+    }
+  },
+  "domain": "https://local.thoughtworks.school/",
+  "path_prefix":"",
+  "sendCloud":{
+    "api_user": "Youruyu0310_test_ix0A9V",
+    "api_key":"JrfJtutsE5z9J9O1",
+    "source":"18829290140@163.com"
+  }
+}

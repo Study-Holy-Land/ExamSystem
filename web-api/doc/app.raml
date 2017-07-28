@@ -1,0 +1,259 @@
+#%RAML 1.0
+title: TWARecurting API
+description:
+version: V1
+baseUri: http://api.bronzesword.com/
+
+/register:
+  post:
+    body:
+      application/json:
+        properties:
+          registerInfo:
+            properties:
+              mobilePhone: string
+              email: string
+              password: string
+    responses:
+      200:
+        description: 注册成功
+      404:
+        description: 邮箱或者手机号已存在
+      500:
+        description: 服务器错误
+
+/register/validate-mobile-phone:
+  get:
+    queryParameters:
+      field: string
+      value: string
+    responses:
+      200:
+        description: 手机号未注册，通过验证
+      404:
+        description: 手机号已经存在
+
+/regester/validate-email:
+  get:
+    queryParameters:
+      field: string
+      value: string
+    responses:
+      200:
+        description: 邮箱未注册，通过验证
+      404:
+        description: 邮箱已经存在
+
+/logic-puzzle:
+  get:
+    queryParameters:
+      userId: integer
+      orderId: integer
+    responses:
+      200:
+        description: 成功获取逻辑题
+  post:
+    body:
+      application/json:
+        properties:
+          examerId: integer
+    responses:
+      200:
+        description: 提交试卷成功
+      500:
+        description: 服务器错误
+
+/logic-puzzle/save:
+  post:
+    body:
+      application/json:
+        properties:
+          orderId: integer
+          userAnswer: string
+          userId: integer
+    responses:
+      200:
+        description: 保存试卷成功
+      500:
+        description: 服务器错误
+
+/logic-puzzle/dealAgree:
+  put:
+    body:
+      application/json:
+        properties:
+          userId: integer
+          isAgreed: string
+    responses:
+      200:
+        description: 修改同意协议状态成功
+      500:
+        description: 服务器错误
+
+  /homework/get-list:
+    get:
+      queryParameters:
+        userId: integer
+      responses:
+        200:
+          description: 获取题目列表成功
+        500:
+          description: 服务器错误
+
+  /homework/quiz:
+    get:
+      queryParameters:
+        userId: integer
+        orderId: integer
+      responses:
+        200:
+          description: 成功获取题目
+        403:
+          description: 题目处于锁住状态
+        404:
+          description: 题目超出范围或者不符合规则
+
+  /homework/save:
+    post:
+      body:
+        application/json:
+          properties:
+            userId: integer
+            orderId: integer
+      responses:
+        200:
+          description: 当题目的状态是可提交或者错误时
+        403:
+          description: 别的情况
+        404:
+          description: 服务器错误
+
+  /homework/result:
+    post:
+      body:
+        application/json:
+          properties:
+            userId: integer
+            orderId: integer
+            resultPath: string
+            resultStatus: integer
+      responses:
+        200:
+          description: 当题目状态是跑测试或者错误时
+        400:
+          description: 别的情况
+        404:
+          description: 服务器错误
+
+  /homework/get-branches:
+    get:
+      queryParameters:
+        apiUrl: string
+      responses:
+        200:
+          description: 服务器正常
+
+/dashboard:
+  get:
+    queryParameters:
+      userId: integer
+    responses:
+      200:
+        description: 逻辑题已经做完
+
+/login:
+  get:
+    queryParameters:
+      account: string
+      password: string
+    responses:
+      200:
+        description: 成功登陆
+      500:
+        description: 服务器错误
+
+/start:
+  get:
+    responses:
+      200:
+        description: 跳转到开始页面
+
+/user-detail:
+  get:
+    queryParameters:
+      userId: integer
+    responses:
+      200:
+        description: 获取到用户信息
+      404:
+        description: 没有找到这个用户
+
+/user-detail/update:
+  put:
+    body:
+      application/json:
+        properties:
+          userId: integer
+          userInfo:
+            properties:
+              school: string
+              name: string
+              gender: string
+              major: string
+              degree: string
+    responses:
+      200:
+        description: 成功更新用户信息
+      500:
+        description: 服务器错误
+      404:
+        description: 没有找到这个用户
+      400:
+        description: 输入不符合条件
+
+/user-detail/change-password:
+  put:
+    body:
+      application/json:
+        properties:
+          userId: integer
+          passwordInfo:
+            properties:
+              oldPassword: string
+              password: string
+              confirmPassword: string
+    responses:
+      200:
+        description: 成功修改密码
+      500:
+        description: 服务器错误
+      404:
+        description: 没有找到这个用户
+      400:
+        description: 输入不符合条件
+
+/logout:
+  get:
+    queryParameters:
+      logoutUrl: string
+    responses:
+      301:
+        description: 成功登出，重定向到注册页面
+
+/timer/remain-timer:
+  get:
+    queryParameters:
+      userId: integer
+    responses:
+      200:
+        description: 逻辑题成功开始计时
+
+/user-initialization:
+  get:
+    queryParameters:
+      userId: integer
+    responses:
+      200:
+        description: 成功初始化
+      500:
+        description: 服务器错误

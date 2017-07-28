@@ -1,0 +1,110 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    env_file:
+      - ./test.env
+    environment:
+      - LANG=C.UTF-8
+      - TERM=dumb
+      - MYSQL_ROOT_PASSWORD={{ MYSQL_ROOT_PASSWORD }}
+      - MYSQL_DATABASE={{ MYSQL_DATABASE }}
+      - MYSQL_PASSWORD={{ MYSQL_PASSWORD }}
+      - MYSQL_USER={{ MYSQL_USER }}
+    networks:
+      main:
+        aliases:
+          - mysql
+  paper-api:
+    image: jetty:9.3
+    volumes:
+      - ../paper-api/build/libs:/var/lib/jetty/webapps
+    ports:
+      - "8080:8080"
+    networks:
+      main:
+        aliases:
+          - paper-api
+  web-api:
+    image: node:6.9.5
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../web-api:/var/app
+    command: bash -c "cd /var/app && export NODE_ENV={{ NODE_ENV }} && npm install canvas && npm start"
+    networks:
+      main:
+        aliases:
+          - web-api
+  mongo:
+    image: mongo:3.2
+    ports:
+      - "27017:27017"
+    networks:
+      main:
+        aliases:
+          - mongo
+  jenkins-dind:
+    build: ./jenkins-docker
+    env_file:
+      - ./test.env
+    ports:
+      - "8088:8080"
+    volumes:
+      - ~/.sshForSymbolicLink/id_rsa.pub:/var/jenkins_home/.ssh/id_rsa.pub
+      - ~/.sshForSymbolicLink/id_rsa:/var/jenkins_home/.ssh/id_rsa
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+      - ~/.sshForSymbolicLink/known_hosts:/var/jenkins_home/.ssh/known_hosts
+    networks:
+      main:
+        aliases:
+          - jenkins
+  nginx:
+    image: nginx:1.9
+    ports:
+      - "8888:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/files:/var/fs
+      - ../web/public/assets:/var/twars/web
+      - ../teacher-admin-web/public/assets:/var/twars/teacher-admin-web
+    networks:
+      main:
+        aliases:
+          - nginx
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7.0-1
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_ABSOLUTE_URI={{ phpmyadmin_url }}
+    external_links:
+      - mysql:db
+    restart: always
+    ports:
+      - 8090:80
+    volumes:
+      - /sessions
+    networks:
+      main:
+        aliases:
+          - phpmyadmin
+#  che:
+#    image: eclipse/che-server:5.5.0
+#    ports:
+#      - "9999:8080"
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#      - $HOME/che_data:/data
+#    environment:
+#      - CHE_HOST=10.22.64.22
+#    networks:
+#      main:
+#       aliases:
+#         - che
+networks:
+  main:
+

@@ -1,0 +1,188 @@
+[
+  {
+    "description": "should_return_quiz_items",
+    "request": {
+      "uri": "/quizItems",
+      "method": "get"
+    },
+    "response": {
+      "json": [
+        {
+          "uri": "quizItems/1"
+        },
+        {
+          "uri": "quizItems/2"
+        },
+        {
+          "uri": "quizItems/3"
+        },
+        {
+          "uri": "quizItems/4"
+        },
+        {
+          "uri": "quizItems/5"
+        },
+        {
+          "uri": "quizItems/6"
+        },
+        {
+          "uri": "quizItems/7"
+        },
+        {
+          "uri": "quizItems/8"
+        },
+        {
+          "uri": "quizItems/9"
+        },
+        {
+          "uri": "quizItems/10"
+        },
+        {
+          "uri": "quizItems/11"
+        },
+        {
+          "uri": "quizItems/12"
+        },
+        {
+          "uri": "quizItems/13"
+        },
+        {
+          "uri": "quizItems/14"
+        },
+        {
+          "uri": "quizItems/15"
+        },
+        {
+          "uri": "quizItems/16"
+        },
+        {
+          "uri": "quizItems/17"
+        },
+        {
+          "uri": "quizItems/18"
+        },
+        {
+          "uri": "quizItems/19"
+        },
+        {
+          "uri": "quizItems/20"
+        },
+        {
+          "uri": "quizItems/21"
+        },
+        {
+          "uri": "quizItems/22"
+        },
+        {
+          "uri": "quizItems/23"
+        },
+        {
+          "uri": "quizItems/24"
+        },
+        {
+          "uri": "quizItems/25"
+        },
+        {
+          "uri": "quizItems/26"
+        },
+        {
+          "uri": "quizItems/27"
+        },
+        {
+          "uri": "quizItems/28"
+        },
+        {
+          "uri": "quizItems/29"
+        },
+        {
+          "uri": "quizItems/30"
+        },
+        {
+          "uri": "quizItems/31"
+        },
+        {
+          "uri": "quizItems/32"
+        },
+        {
+          "uri": "quizItems/33"
+        },
+        {
+          "uri": "quizItems/34"
+        },
+        {
+          "uri": "quizItems/35"
+        },
+        {
+          "uri": "quizItems/36"
+        },
+        {
+          "uri": "quizItems/37"
+        },
+        {
+          "uri": "quizItems/38"
+        },
+        {
+          "uri": "quizItems/39"
+        },
+        {
+          "uri": "quizItems/40"
+        },
+        {
+          "uri": "quizItems/41"
+        },
+        {
+          "uri": "quizItems/42"
+        },
+        {
+          "uri": "quizItems/43"
+        },
+        {
+          "uri": "quizItems/44"
+        },
+        {
+          "uri": "quizItems/45"
+        },
+        {
+          "uri": "quizItems/46"
+        },
+        {
+          "uri": "quizItems/47"
+        },
+        {
+          "uri": "quizItems/48"
+        },
+        {
+          "uri": "quizItems/49"
+        },
+        {
+          "uri": "quizItems/50"
+        }
+      ]
+    }
+  },
+  {
+    "description": "should_add_a_new_quiz_item",
+    "request": {
+      "uri": "/quizItems",
+      "method": "post",
+      "json": {
+        "maxUpdateTimes": 10,
+        "initializedBox": "[0,2,7,2,5,7,1,1,4,8]",
+        "stepsString": "Steps(%20Begin(),%20%0APut(number_in_box(4),%20into_box(4)),%0AChange_Box_Number(the_instruction_box(step_number(9),%202),%20increase(1)),%0AVerify(greater_than(instruction_box_number(step_number(9),%202),%20number_in_box(2)),%20then_go_to_step(7),%20then_go_to_step(6)),%0AOperation(Multiply(),%20number_in_box(6),%20number_in_box(9),%20put_result_into_box(6)),%0AVerify(greater_than(instruction_box_number(step_number(9),%201),%20number_in_box(5)),%20then_go_to_step(3),%20then_go_to_step(2)),%0AVerify(greater_than(instruction_box_number(step_number(9),%202),%20number_in_box(2)),%20then_go_to_step(8),%20then_go_to_step(4)),%0AChange_Box_Number(the_instruction_box(step_number(9),%201),%20increase(1)),%0AChange_Box_Number(the_instruction_box(step_number(1),%202),%20increase(1)),%0APut(number_in_box(4),%20into_box(2)),%20End())",
+        "count": 10,
+        "questionZh": "经过以上操作之后，现在6号盒子中的数字是多少?",
+        "stepsLength": 11,
+        "answer": "10",
+        "descriptionZh": "[\"\",\"更改指令9：将该指令中的第2个盒子的编号加1\",\"判断：指令9中第2个盒子的编号比2号盒子中的数字大吗\",\"相乘：6号盒子中的数字*9号盒子中的数字，将结果放在6号盒子中。\",\"判断：指令9中第1个盒子的编号比5号盒子中的数字大吗\",\"判断：指令9中第2个盒子的编号比2号盒子中的数字大吗\",\"更改指令9：将该指令中的第1个盒子的编号加1\",\"更改指令1：将该指令中的第2个盒子的编号加1\",\"将4号盒子中的数字放在2号盒子中\",\"\"]",
+        "chartPath": "logic-puzzle/1.png",
+        "infoPath": "logic-puzzle/1.json"
+      }
+    },
+    "response": {
+      "status": 201,
+      "json": {
+        "uri": "quizItems/51"
+      }
+    }
+  }
+]

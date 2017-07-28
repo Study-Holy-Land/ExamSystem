@@ -1,0 +1,21 @@
+[
+  {
+    "description": "should_return_users_when_get_user",
+    "request": {
+      "uri": "/users/1",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "mobilePhone": "18798037893",
+        "id": 1,
+        "email": "test@163.com",
+        "role": [
+          0,
+          1
+        ],
+        "userName": "章三"
+      }
+    }
+  }
+]

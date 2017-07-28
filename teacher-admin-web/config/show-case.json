@@ -1,0 +1,6 @@
+{
+	"webApiPrefix": "/api",
+	"pathPrefix": "",
+  "domain": " http://show-case.thoughtworks.school:8888"
+}
+

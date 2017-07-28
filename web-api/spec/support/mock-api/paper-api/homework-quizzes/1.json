@@ -1,0 +1,61 @@
+[
+  {
+    "description": "should_return_one_homework_quiz_when_request_one_homework_quiz",
+    "request": {
+      "uri": "/homeworkQuizzes/1",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "makerId": 1,
+        "createTime": 123456,
+        "makerDetailUri": "users/1/detail",
+        "evaluateScript": "/homework-script/check-readme.sh",
+        "homeworkName": "homework1",
+        "templateRepository": "",
+        "answerPath": "/homework-answer/check-readme",
+        "description": "## 编程题答题说明\n点击编程题进入答题页面后，您可以看到导航栏处三个标签，分别为：**题目说明**，**提交作业**，**运行结果**\n### 题目说明\n题目说明标签内包含：\n![All text](https://raw.githubusercontent.com/sialvsic/TwicePic/master/desc1.jpg)\n![Alt text](https://raw.githubusercontent.com/sialvsic/TwicePic/master/desc2.jpg)\n![Alt text](https://raw.githubusercontent.com/s",
+        "id": 1,
+        "uri": "homeworkQuizzes/1",
+        "stackId": 1
+      }
+    }
+  },
+  {
+    "description": "should_return_one_homework_quiz_when_request_one_homework_quiz",
+    "request": {
+      "uri": "/homeworkQuizzes/2",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "makerId": 2,
+        "createTime": 123457,
+        "makerDetailUri": "users/2/detail",
+        "evaluateScript": "/homework-script/calculate_median.sh",
+        "homeworkName": "homework2",
+        "templateRepository": "https://github.com/simpletrain/easy-calculate.git",
+        "answerPath": "/homework-answer/calculate_median",
+        "description": "## 题目要求\n- 请用JavaScript语言完成此题\n- 请在开始答题后 `7` 天内完成\n\n------------------\n## 题目描述\n写一个函数，使该函数返回输入数组中所有第偶数个元素的中位数：\n\n```\n输入&&输出：\n当输入数据为 [1,2,3,4]时      输出为 3\n```\n\t\n**NOTE：**请注意数据格式\n\n------------\n\n## 答题流程\n1. 请用户仔细阅读题目要求和题目描述\n\n2. 在命令行中使用以下命令在用户本地任意目录下clone此题目库\n\t\n\t```\t\n\t$ git clone https://github.com/simpletrai",
+        "id": 2,
+        "uri": "homeworkQuizzes/2",
+        "stackId": 2
+      }
+    }
+  },
+  {
+    "description": "should_return_one_homework_quiz_when_request_one_homework_quiz",
+    "request": {
+      "uri": "/homeworkQuizzes/1",
+      "method": "put",
+      "json": {
+        "operatorId": 1,
+        "operationType": "DELETE"
+      }
+    },
+    "response": {
+      "json": {},
+      "status": 204
+    }
+  }
+]

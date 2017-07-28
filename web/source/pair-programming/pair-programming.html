@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="style/index.css"/>
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="style/mobile.css" type="text/css"/>
+    <link rel="stylesheet" media="screen and (min-width:800px)" href="style/PC.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="style/shake.css">
+    <link rel="stylesheet" type="text/css" href="style/fixed-positioning.css">
+    <link rel="stylesheet" type="text/css" href="style/level1-light-animation.css">
+    <script src="script/siema.min.js"></script>
+    <title>ThoughtWorks Pair Programming</title>
+    <script type="text/javascript">
+      function displayLoading() {
+        document.getElementById("over").style.display = "none";
+        document.getElementById('layout').style.display = 'none';
+        document.getElementById('main').style.opacity = '1';
+      }
+
+      var t = setInterval(function () {
+        if (document.readyState == "complete") {
+          clearInterval(t);
+          displayLoading();
+        }
+      }, 500);
+
+    </script>
+</head>
+<body>
+<div id="over" class="over"></div>
+<div id="layout" class="layout"><img src="http://files.jb51.net/file_images/article/201311/2013112931.gif" alt=""/>
+</div>
+<div id="main">
+    <div class="level1-level2-level3__back-ground" id="skrollr-body"></div>
+    <section>
+        <div class="begin"
+             data-start="top:0%;"
+             data-1400="top:0%;display:flex;height:100%"
+             data-1800="top:-100%; display: none">
+            <div class="begin__header">
+                最佳编程体验之旅 SEASON 2
+            </div>
+            <div class="begin__body">
+                <div class="keep-width-element">
+                    <img src="img/background-horizontal.png" alt="" class="level3__background-horizontal">
+                </div>
+                <div class="begin__pair-programming">
+                    <img src="img/pair-programming.png" alt="">
+                </div>
+                <div class="begin__pair-programming-cn">
+                    <img src="img/par-programming-cn.png"/>
+                </div>
+                <div class="begin__pear">
+                    <img src="img/pear.png" alt="">
+                </div>
+                <div class="begin__sign-up">
+                    <div class="begin__sign-up__button">
+                        <button><a class="login-sys" href="/learn/" onclick="setCookie(0)">我要报名</a></button>
+                    </div>
+                    <img src="img/ground.png" alt="" class="begin__sign-up__ground">
+                </div>
+                <div class="heavenly-body__left1"
+                     data-9="opacity:0" data-10="top:100%; opacity:1"
+                     data-200="top:10%;" data-800="top:10%"
+                     data-1000="top:-50%;opacity:0;">
+                    <img src="img/heavenly-body/left1.png" alt="">
+                </div>
+                <div class="heavenly-body__right2"
+                     data-9="opacity: 0" data-10="top: 100%; opacity: 1"
+                     data-200="top:10%;" data-800="display:block; top:0%"
+                     data-1000="top: -50%;opacity: 0;">
+                    <img src="img/heavenly-body/right2.png" alt="">
+                </div>
+                <div class="heavenly-body__left3"
+                     data-199="opacity: 0" data-200="top: 100%; opacity: 1"
+                     data-400="top: 31%;" data-1000="top:31%"
+                     data-1200="top: -50%;opacity: 0;">
+                    <img src="img/heavenly-body/left3.png" alt="">
+                </div>
+                <div class="heavenly-body__right3"
+                     data-39="opacity: 0" data-200="top: 100%; opacity: 1"
+                     data-400="top: 33%;" data-1000="top:33%"
+                     data-1200="top: -50%;opacity: 0;">
+                    <img src="img/heavenly-body/right3.png" alt="">
+                </div>
+                <div class="heavenly-body__left2"
+                     data-299="opacity: 0" data-300="top: 100%; opacity: 1"
+                     data-600="top: 44%;" data-1200="top:44%"
+                     data-1400="top: -50%;opacity: 0;">
+                    <img src="img/heavenly-body/left2.png" alt="">
+                </div>
+                <div class="heavenly-body__right1"
+                     data-299="opacity: 0" data-300="top: 100%; opacity: 1"
+                     data-600="top: 42%;" data-1200="top:42%"
+                     data-1400="top: -50%;opacity: 0;">
+                    <img src="img/heavenly-body/right1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="video"
+             data-1600="top:100%;"
+             data-2000="top:0%;"
+             data-3000="top:0%;display:flex;height:100%"
+             data-3200="top:-110%; display: none;">
+            <div class="video__header">
+                ThoughtWorks is more than coding
+            </div>
+            <div class="keep-width-element">
+                <img src="img/background-horizontal.png" alt="" class="level3__background-horizontal">
+            </div>
+            <div class="video__body">
+                <div class="video-frame__layer1"
+                     data-2000="top:12%"
+                     data-2400="top: 6%" data-2800="top: 6%"
+                     data-3000="top: 0%"></div>
+                <div class="video-frame__layer2"
+                     data-2000="top:30%"
+                     data-2400="top: 16%" data-2800="top: 16%"
+                     data-3000="top: 0%"></div>
+                <div class="video-frame__layer3"
+                     data-2000="top:35%"
+                     data-2400="top: 19%" data-2800="top: 19%"
+                     data-3000="top: 0%"></div>
+                <div class="video__body__watch-video"
+                     data-2000="top:74%"
+                     data-2400="top: 40%" data-2800="top: 40%"
+                     data-3000="top: 1%">
+                    <img src="img/watch-video.png" alt="">
+                </div>
+                <div class="video-frame__layer4"
+                     data-2000="top: 53%"
+                     data-2400="top: 28%" data-2800="top: 28%"
+                     data-3000="top: 0%">
+                    <div class="video__body__background">
+                        <div class="video__body__watch-video-cn" onClick="videoPlayPause()">
+                            <video id="video-programming-tour" preload="none">
+                                <source src="http://113.200.99.132/xdispatch/7xlgq2.com1.z0.glb.clouddn.com/final.mp4">
+                                </source>
+                            </video>
+                            <img src="img/watch-video-cn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="full_width"
+             data-3100="top:100%;"
+             data-3500="top:0%;"
+             data-4450="top:0%;display:flex;height:100%"
+             data-4900="display: none">
+            <div class="level1 relative_the_section">
+                <div data-4000="top:15%"
+                     data-4200="top:-100%;">
+                    <div class="level1__header">
+                        <img src="img/level1-header.png" alt="">
+                    </div>
+                </div>
+                <div class="column_width_height_center level1__body__height"
+                     data-4200="top:30%"
+                     data-4400="top:-100%;">
+                    <div class="level1__body">
+                        <div class="level1__background"
+                             data-3500="opacity: 0;"
+                             data-3600="opacity: 1;">
+                            <div class="light-relative-position">
+                                <div class="level1__background-red1--position">
+                                    <div class="level1__background-red1">
+                                        <div class="level1__background-red1--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-orange1--position">
+                                    <div class="level1__background-orange1">
+                                        <div class="level1__background-orange1--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-orangered1--position">
+                                    <div class="level1__background-orangered1">
+                                        <div class="level1__background-orangered1--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-red2--position">
+                                    <div class="level1__background-red2">
+                                        <div class="level1__background-red2--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-orange2--position">
+                                    <div class="level1__background-orange2">
+                                        <div class="level1__background-orange2--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-orangered2--position">
+                                    <div class="level1__background-orangered2">
+                                        <div class="level1__background-orangered2--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-red3--position">
+                                    <div class="level1__background-red3">
+                                        <div class="level1__background-red3--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-red4--position">
+                                    <div class="level1__background-red4">
+                                        <div class="level1__background-red4--space"></div>
+                                    </div>
+                                </div>
+                                <div class="level1__background-orange3--position">
+                                    <div class="level1__background-orange3">
+                                        <div class="level1__background-orange3--space"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level1__keys">
+                            <div class="level1__keys--row">
+                                <img src="img/keys/S.png" alt="" class="shake-slow3 shake-constant">
+                                <img src="img/keys/H.png" alt="" class="shake-slow2 shake-constant">
+                                <img src="img/keys/O.png" alt="" class="shake-slow1 shake-constant">
+                                <img src="img/keys/R.png" alt="" class="shake-slow4 shake-constant">
+                                <img src="img/keys/T.png" alt="" class="shake-slow2 shake-constant">
+                            </div>
+                            <div class="level1__keys--row2">
+                                <img src="img/keys/⌘.png" alt="" class="shake-slow shake-constant">
+                                <img src="img/keys/C.png" alt="" class="shake-slow3 shake-constant">
+                                <img src="img/keys/U.png" alt="" class="shake-slow2 shake-constant">
+                                <img src="img/keys/T2.png" alt="" class="shake-slow1 shake-constant">
+                            </div>
+                            <div class="keep-width-element">
+                                <img src="img/background-horizontal.png" alt="" class="level3__background-horizontal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column_width_height_center full_width"
+                     data-4200="top:80%"
+                     data-4400="top:50%;"
+                     data-4800="opacity:1"
+                     data-4900="opacity:0">
+                    <div class="level1__time">
+                        <span class="level1__number">5</span>
+                        <span>月</span>
+                        <span class="level1__number">2</span>
+                        <span>日</span>
+                        <span class="level1__tiled"> ～ </span>
+                        <span class="level1__number">5</span>
+                        <span>月</span>
+                        <span class="level1__number">22</span>
+                        <span>日</span>
+                    </div>
+                    <div class="level1__description">
+                        观看快捷键教学视频，观看完毕开始答题，全部答完解锁下一关。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="full_width"
+             data-4800="top:100%;"
+             data-5200="top:0%;"
+             data-8100="top:0%;display:flex;justify-content: center;height:100%;"
+             data-8101="display: none; top: -100%">
+            <div class="level2 relative_the_section">
+                <div data-7200="top:15%;"
+                     data-7400="top:-100%;">
+                    <div class="level2__header">
+                        <img src="img/level2-header.png" alt="">
+                    </div>
+                </div>
+                <div class="column_width_height_center level2__body__height"
+                     data-7400="top:30%;"
+                     data-7600="top:-100%;">
+                    <div class="level2__body">
+                        <div class="keep-width-element">
+                            <img src="img/background-horizontal.png" alt="" class="level3__background-horizontal">
+                        </div>
+                        <div>
+                            <div class="level2__body__floor-back-ground">
+                                <img src="img/floor.png" alt="" class="level2__body__floor">
+                                <img src="img/floor.png" alt="" class="level2__body__floor">
+                                <img src="img/floor-light.png" alt="" class="level2__body__floor-light">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="level2__body__mac">
+                                <img src="img/mac.png" alt="">
+                                <img src="img/pear/hand.png" alt="" class="level2__body__hand">
+                                <img src="img/pear/body.png" alt="" class="level2__body__pear">
+                                <img src="img/pear/white-of-eye.png" alt="" class="level2__body__pear-eye-white">
+                                <img src="img/pear/eyeball.png" alt=""
+                                     class="level2__body__pear-eye-ball shake-little shake-constant">
+                                <img src="img/pear/mouth.png" alt="" class="level2__body__pear-mouth">
+                            </div>
+                        </div>
+                        <img src="img/lights/light1.png" alt="" class="heavenly-body__light heavenly-body__light1">
+                        <img src="img/lights/light2.png" alt="" class="heavenly-body__light heavenly-body__light2">
+                        <img src="img/lights/light3.png" alt="" class="heavenly-body__light heavenly-body__light3">
+                        <img src="img/lights/light4.png" alt="" class="heavenly-body__light heavenly-body__light4">
+                        <div class="heavenly-body__left1"
+                             data-5399="opacity: 0"
+                             data-5400="top: 140%; opacity: 1"
+                             data-5600="top: 10%; opacity: 1"
+                             data-6200='top:10%; display:block;'
+                             data-6400="top: -160%;opacity: 0">
+                            <img src="img/heavenly-body/left1.png" alt="">
+                        </div>
+                        <div class="heavenly-body__right2"
+                             data-5399="opacity: 0"
+                             data-5400="top: 140%; opacity: 1"
+                             data-5600="top: 0%;"
+                             data-6200="top: 0%; display:block;"
+                             data-6400="top: -150%;opacity: 0">
+                            <img src="img/heavenly-body/right2.png" alt="">
+                        </div>
+                        <div class="heavenly-body__left3"
+                             data-5599="opacity: 0"
+                             data-5600="top: 140%; opacity:1"
+                             data-6000="top: 31%; display:block;"
+                             data-6400="top: 31%; display:block;"
+                             data-6600="top: -181%;opacity: 0">
+                            <img src="img/heavenly-body/left3.png" alt="">
+                        </div>
+                        <div class="heavenly-body__right3"
+                             data-5599="opacity: 0"
+                             data-5600="top: 140%; opacity:1"
+                             data-6000="top: 33%; display:block;"
+                             data-6400="top: 33%; display:block;"
+                             data-6600="top: -183%;opacity: 0">
+                            <img src="img/heavenly-body/right3.png" alt="">
+                        </div>
+                        <div class="heavenly-body__left2"
+                             data-5799="opacity: 0"
+                             data-5800="top: 140%; opacity:1"
+                             data-6000="top: 44%;"
+                             data-6600="top: 44%; display:block;"
+                             data-7200="top: -194%;opacity: 0">
+                            <img src="img/heavenly-body/left2.png" alt="">
+                        </div>
+                        <div class="heavenly-body__right1"
+                             data-5799="opacity: 0"
+                             data-5800="top: 140%; opacity:1"
+                             data-6000="top: 42%;"
+                             data-6600="top: 42%; display:block;"
+                             data-7200="top: -194%;opacity: 0">
+                            <img src="img/heavenly-body/right1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="column_width_height_center full_width"
+                     data-7600="top:80%;"
+                     data-7650="top:50%;"
+                     data-8000="opacity: 1"
+                     data-8100="opacity: 0">
+                    <div class="level2__time">
+                        <span class="level2__number">5</span>
+                        <span>月</span>
+                        <span class="level2__number">2</span>
+                        <span>日</span>
+                        <span class="level2__tiled"> ～ </span>
+                        <span class="level2__number">5</span>
+                        <span>月</span>
+                        <span class="level2__number">22</span>
+                        <span>日</span>
+                    </div>
+                    <div class="level2__description">
+                        根据要求提交代码作业，根据第一关答题总和评定，解锁下一关。<br/>
+                        <span class="level2__description__note">
+                   所有提交代码作业的同学均会邀请观看代码作业的结对编程直播～
+            </span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="full_width"
+             data-8100="top:100%;"
+             data-8400="top: 3%;"
+             data-11000="top: 3%; display:flex; justify-content: center;height:100%"
+             data-11100="display: none">
+            <div class="level3 relative_the_section">
+                <div data-10000="top:8%;"
+                     data-10200="top:-100%;">
+                    <div class="level3__header">
+                        <img src="img/level3-header.png" alt="">
+                    </div>
+                </div>
+                <div class="column_width_height_center level3__body__height"
+                     data-10200="top:27%;"
+                     data-10600="top:-100%;">
+                    <div class="level3__body">
+                        <div class="level3__background">
+                            <img src="img/background-horizontal.png" alt="" class="level3__background-horizontal">
+                            <img src="img/background-vertical.png" alt="" class="level3__background-vertical">
+                        </div>
+                        <div class="level3__hands">
+                            <img src="img/left-hand.png" alt="" class="level3__left-hand">
+                            <img src="img/right-hand.png" alt="" class="level3__right-hand">
+                        </div>
+                        <img src="img/stars/red1.png" alt="" class="star__red1" data-8400="top:200%" data-9000="top:88%"
+                             data-9300="top:88%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                        <img src="img/stars/red2.png" alt="" class="star__red2" data-8400="top:200%" data-9000="top:0%"
+                             data-9300="top:0%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                        <img src="img/stars/red3.png" alt="" class="star__red3" data-8400="top:200%" data-9000="top:30%"
+                             data-9300="top:30%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                        <img src="img/stars/yellow1.png" alt="" class="star__yellow1" data-8400="top:200%"
+                             data-9000="top:56%"
+                             data-9300="top:56%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                        <img src="img/stars/yellow2.png" alt="" class="star__yellow2" data-8400="top:200%"
+                             data-9000="top:9%"
+                             data-9300="top:9%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                        <img src="img/stars/orange1.png" alt="" class="star__orange1" data-8400="top:200%"
+                             data-9000="top:63%"
+                             data-9300="top:63%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                        <img src="img/stars/orange2.png" alt="" class="star__orange2" data-8400="top:200%"
+                             data-9000="top:9%"
+                             data-9300="top:9%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                        <img src="img/stars/orange3.png" alt="" class="star__orange3" data-8400="top:200%"
+                             data-9000="top:31%"
+                             data-9300="top:31%; opacity: 1;" data-9700="top:-100%; opacity: 0;">
+                    </div>
+                </div>
+                <div class="column_width_height_center full_width"
+                     data-10200="top:80%;"
+                     data-10600="top:50%;"
+                     data-11000="opacity:1"
+                     data-11100="opacity:0">
+                    <div class="level3__time">
+                        <span class="level2__number">6</span>
+                        <span>月</span>
+                        <span class="level2__number">2</span>
+                        <span>日</span>
+                        <span class="level2__tiled"> ～ </span>
+                        <span class="level2__number">6</span>
+                        <span>月</span>
+                        <span class="level2__number">4</span>
+                        <span>日</span>
+                    </div>
+                    <div class="level3__description">
+                        结对编程马拉松，3天Pair－Programming深度体验之旅～
+                        一边写代码，一边学编程。
+                        北京、西安、成都、武汉。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="activity-and-award"
+             data-10700="top:200%;"
+             data-11500="top:0%;"
+             data-12100="display:flex; justify-content: center; height:120%"
+             data-12600="display:flex; justify-content: center;"
+             data-12800="top:-120%;">
+            <div class="activity" data-11700="top: 0" data-12200="top:-120%">
+                <div class="activity-detail">
+                    <div class="activity-detail-content">
+                        <div class="activity-detail__target">面向人群： 2018届&2019届，全日制本科or研究生</div>
+                        <div class="activity-detail__process">
+                            <div class="activity-detail__process--head">流程说明：</div>
+                            <div class="activity-detail__process--level">
+                                <div class="num">第一关：</div>
+                                <div class="desciption">5月2日—5月22日，挑战快捷键；</div>
+                            </div>
+                            <div class="activity-detail__process--level">
+                                <div class="num">第二关：</div>
+                                <div class="desciption">
+                                    5月2日—5月22日，挑战编程题；<br/>
+                                    5月15日，Pair—Programing Coding直播（具体直播地址及时间将邮件短信通知）
+                                </div>
+                            </div>
+                            <div class="activity-detail__process--level">
+                                <div class="num">第三关：</div>
+                                <div class="desciption">6月2日—6月4日，结对编程马拉松（结合第一轮&第二轮评分、筛选、通知）；</div>
+                            </div>
+                            <div class="activity-detail__process--end">
+                                每个城市前50位的同学将会前往ThoughtWorks四地办公室（北京、西安、成都、武汉）参与结对编程深入体验。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="awards" id="easing" data-12200="top:58%" data-12400="top:top:30%" data-12600="top:30%"
+                 data-12800="top:-120%">
+                <div class="awards__header">
+                    体验结对编程乐趣的同时，更有可能获得超值大奖
+                </div>
+                <div class="awards__img">
+                    <img src="./img/award.png" alt="奖品">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="last-part-do-not-parallax">
+            <div class="coaches">
+                <div class="coaches__left-arrow bounce-left" onclick="prevArrow(true)"></div>
+                <div class="coaches__photos siema1" onmouseover="clearHuman()" onmouseout="createHuman()">
+                    <div class="human-display">
+                        <img src="img/photo/anfeng-yao.png" alt="">
+                        <div class="instruction">
+                            <h5>姚安峰 ThoughtWorks首席咨询顾问</h5>
+                            主导翻译了著作《精益企业》。从08年起致力于敏捷的践行和推广，
+                            理论与实践涵盖敏捷、精益、持续交付和DevOps全流程各领域，
+                            帮助各行业客户采纳优秀且与企业环境相适应的管理和技术实践交付高价值、高质量产品，提升创新能力，推动持续改进。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/bin-wu.png" alt="">
+                        <div class="instruction">
+                            <h5>伍斌 ThoughtWorks首席咨询师</h5>
+                            2014年GDCR 北京组织主持者。著有《驯服烂代码：在编程操练中悟道》。
+                            自93年大学毕业以来，先后做过程序员、项目经理和软件开发咨询师。2013年4月创办全栈开发者的编程操练社区“bjdp.org北京设计模式学习组”。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/bingyu-lin.png" alt="">
+                        <div class="instruction">
+                            <h5>林冰玉 ThoughtWorks高级质量分析师</h5>
+                            十年的软件质量相关工作，积累了丰富企业级应用和大型产品应用的测试和管理经验。
+                            目前除了在项目上负责质量相关工作之外，还是ThoughtWorks中国QA社区负责人、BQConf负责人。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/chongxiao-zhang.png" alt="">
+                        <div class="instruction">
+                            <h5>张霄翀 ThoughtWorks高级咨询师</h5>
+                            拥有丰富的互联网开发实战经验。
+                            参与翻译了《JavaScript机器人编程指南》和《七周七Web框架》并已出版。多年专注于前端开发技术与最佳实践。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/danni-yu.png" alt="">
+                        <div class="instruction">
+                            <h5>余丹妮 ThoughtWorks高级咨询师</h5>
+                            ，有多年IT咨询界的经验，涉及零售，政府，媒体，金融，医疗等多个行业，
+                            曾担任年轻女学生科技创业项目的导师。目前专注于发展中国家医疗物流系统的实施。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/hao-xu.png" alt="">
+                        <div class="instruction">
+                            <h5>徐昊 ThoughtWorks中国区CTO，ThoughtWorks全球技术策略顾问</h5>
+                            中国软件技术社区活跃的领导者之一。他是BJUG（BeijingJava User Group）和“敏捷中国”组织创始人，
+                            并曾在“敏捷中国”软件技术大会、中国系统与软件过程改进年会等会议上发表主题演讲。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/jie-xiong.png" alt="">
+                        <div class="instruction">
+                            <h5>熊杰 ThoughtWorks全球医疗业务的总监咨询师</h5>
+                            曾经架构和开发多个大型企业软件系统，
+                            领导过多家行业领先企业的敏捷组织转型，并参与了多家知名机构的IT组织架构组建。
+                            早年曾翻译了《重构》、《最后期限》、《与熊共舞》、《软件工艺》等行业重要著作，
+                            参与了Selenium、RubyWorks、OpenLMIS等开源软件社区，并在各种媒体发表过数十篇文章。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/Jim-Highsmith.png" alt="">
+                        <div class="instruction">
+                            <h5>Jim Highsmith ThoughtWorks总裁顾问，敏捷宣言签署人</h5>
+                            Jim Highsmith在软件开发和IT行业有着超过25年的经验，
+                            也是敏捷宣言的创始人之一、敏捷联盟的发起人和第一任理事。
+                            在美国、欧洲、加拿大、南非、澳大利亚、日本、印度和新西兰等国家的IT行业、产品开发组织和软件公司中有相当大的影响力。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/jingxian-zhuo.png" alt="">
+                        <div class="instruction">
+                            <h5>禚娴静 ThoughtWorks 首席咨询师</h5>
+                            她拥有多年企业和互联网应用的开发实战经验，
+                            专注于敏捷实践、软件架构和持续交付领域，致力于为客户提供专业的技术改进和咨询服务，
+                            尤其在 .NET 技术栈和微服务架构演化。目前服务于某大型金融项目，带领团队制定技术战略，保证高质量和高效的交付。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/linye-wu.png" alt="">
+                        <div class="instruction">
+                            <h5>吴琳叶 ThoughtWorks中国区设计总监</h5>
+                            致力于打造多元文化的全功能团队，
+                            曾带领团队服务过国内外多个大型集团客户。并聚集了一批拥有零售、金融等领域丰富经验的专业设计师。
+                            帮助客户进行数字化转型，为颇具行业领导力的客户提供根植业务的创新产品交付和体验设计咨询服务。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/Martin-Fowler.png" alt="">
+                        <div class="instruction">
+                            <h5>Martin Fowler ThoughtWorks公司的首席科学家，国际著名的面向对象分析设计、UML、模式等方面的专家，敏捷开发方法的创始人之一</h5>
+                            《敏捷宣言》十七位提出者之一，提出了“微服务”理念和原则，著有书籍：《分析模式》、《UML精粹》和《重构》等，被开发者们尊称为软件“教父”。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/Mike-Mason.png" alt="">
+                        <div class="instruction">
+                            <h5>Mike Mason ThoughtWorks技术活动家</h5>
+                            他热衷于将尖端技术应用于业务问题，帮助客户了解科技如何成为业务的关键部分。
+                            同时也在ThoughtWorks技术顾问委员会任职，该委员会是来自世界各地的一批资深顾问，他向CTO提供有关技术指导和策略的建议。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/Neal-Ford.png" alt="">
+                        <div class="instruction">
+                            <h5>Neal Ford ThoughtWorks软件架构师，同时担任总监和文化基因传播人</h5>
+                            精通各种编程语言，主要的咨询业务是大规模企业应用的设计、构建和工程实践，另外还是各种技术书籍的作者或者编辑，
+                            其中包括最近的新书The Productive Programmer。 他还是一位国际知名的讲师，登上过全世界各种开发者会议的讲台。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/ni-wang.png" alt="">
+                        <div class="instruction">
+                            <h5>王妮 ThoughtWorks高级咨询师。海外项目Team Lead，TWU、TWI培训师</h5>
+                            （注：TWU为ThoughtWorks为期5周的公派留学项目，所有加入ThoughtWorks的应届生均会参加）。
+                            热爱技术和培训，认为参与培训是最好的学习手段之一。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/Ola-Bini-Copy.png" alt="">
+                        <div class="instruction">
+                            <h5>Ola Bini ThoughtWorks首席技术狂，JRuby创始人</h5>
+                            是一名开发人员、技术专家和架构师。
+                            喜欢用Lisp和Ruby,长期以来对Java有着深入的理解,可以处理几乎所有环境和系统。对人工智能有着特殊的兴趣,语言范式和智能代理。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/qihui-qin.png" alt="">
+                        <div class="instruction">
+                            <h5>覃其慧 ThoughtWorks资深质量分析师，敏捷咨询师</h5>
+                            有11年敏捷软件开发实践经验、咨询经验。
+                            曾在Infoq、ThoughtWorks洞见上发表过测试相关文章，并在Agile Conference、Scrum Gathering等大型会议上主题演讲，
+                            尤其对安全测试方向有丰富的研究和实践经验。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/ran-xiao.png" alt="">
+                        <div class="instruction">
+                            <h5>肖然 ThoughtWorks 中国区咨询负责人，计算机算法及复杂度博士研究生，大型IT组织精益治理、敏捷开发专家</h5>
+                            在过去5年时间里带领ThoughtWorks咨询团队在Lean Enterprise、Agile Development、Continuous Delivery、
+                            DevOps等方面为20多家大中型企业提供了从战略规划到实践落地的长期创新服务，目前也是两家万人IT组织的首席敏捷转型顾问。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/Rebecca-Parsons.png" alt="">
+                        <div class="instruction">
+                            <h5>Rebecca Parsons ThoughtWorks CTO</h5>
+                            在电讯业、紧急互联网业务等领域，在创建大规模分布式对象应用程序和整合不同系统等方面都拥有丰富的经验。
+                            曾在中佛罗里达大学担任计算机科学助理教授、洛斯阿拉莫斯国家实验室担任导演博士后研究员。
+                            丽贝卡获得布莱德利大学计算机科学与经济学学士学位，莱斯大学计算机科学硕士学位和博士学位。赖大学计算机科学系。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/rujia-wang.png" alt="">
+                        <div class="instruction">
+                            <h5>王汝佳 ThoughtWorks首席战略咨询师、资深商业分析师和用户体验设计师</h5>
+                            曾为10多家国内外金融／零售／科技企业提供战略咨询与产品服务设计。目前担任ThoughtWorks全球战略咨询负责人。
+                        </div>
+                    </div>
+                    <div class="human-display">
+                        <img src="img/photo/yun-yang.png" alt="">
+                        <div class="instruction">
+                            <h5>杨云 ThoughtWorks首席咨询师</h5>
+                            19年从业经验，前任支付宝公司架构师（之一）。
+                            函数式编程专家，擅长Scala和Haskell语言，翻译了《深入理解Scala》一书，正在主讲一门Scala在线课。对数据流编程、FRP等深入掌握和独到见解。
+                        </div>
+                    </div>
+                </div>
+                <div class="coaches__right-arrow bounce-right" onclick="nextArrow(true)"></div>
+            </div>
+            <div class="books">
+                <div class="books__left-arrow bounce-left" onClick="prevArrow(false)"></div>
+                <div class="books__covers siema2" onmouseover="clearBook()" onmouseout="createBook()">
+                    <img src="img/books/TW.png" alt="">
+                    <img src="img/books/bad-code.png" alt="">
+                    <img src="img/books/building-microservice.png" alt="">
+                    <img src="img/books/effective-js.png" alt="">
+                    <img src="img/books/TW2_.png" alt="">
+                    <img src="img/books/js-core.png" alt="">
+                    <img src="img/books/mobile-22.png" alt="">
+                    <img src="img/books/refactoring.png" alt="">
+                </div>
+                <div class="books__right-arrow bounce-right" onClick="nextArrow(false)"></div>
+            </div>
+            <div class="about-us">
+                <div class="about-us__content">
+                    <div class="about-us__tw">
+                        <div class="about-us__tw__title">
+                            <span>关于</span>
+                            <img src="img/tw-logo.png" alt="" class="thought-works-logo">
+                        </div>
+                        <div class="about-us__tw__detail">
+                            ThoughtWorks是一家全球信息技术服务公司，在美国、英国、澳大利亚、德国、新加坡、印度、巴西、南非、中国、厄尔瓜多、土耳其等十几个国家中，她成为超过4000技术牛人的实践乐园。
+                        </div>
+                        <div class="about-us__tw__detail">
+                            ThoughtWorks进入中国十年，分别在北京、上海、深圳、西安、成都和武汉成立了分公司，有接近1000名员工通过全局资源共享和人才交流，服务全球各行各业的顶尖客户。
+                        </div>
+                    </div>
+                    <div class="about-us__code">
+                        <span class="about-us__interactive">与我们互动</span>
+                        <img src="img/tw-code.jpg" alt="" class="about-us__QR-Code">
+                    </div>
+                </div>
+                <img src="img/background-bottom.png" alt="" class="background-bottom">
+            </div>
+            <div class="foot">
+                <div class="foot__entry-point">
+                    <div><a href="https://www.thoughtworks.com/cn/">公司首页</a></div>
+                    <div><a href="https://www.thoughtworks.com/cn/about-us">关于我们</a></div>
+                    <div><a href="https://www.thoughtworks.com/cn/insights">观点洞见</a></div>
+                    <div><a href="https://www.thoughtworks.com/cn/news">新闻与媒体</a></div>
+                    <div><a href="https://www.thoughtworks.com/cn/careers">加入我们</a></div>
+                </div>
+                <div class="foot__copy-right">
+                    <span>&copy;2017 ThoughtWorks. Inc.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner"
+         data-start="top:0%">
+        <div class="banner__logo">
+            <img src="img/tw-logo.png" alt="">
+        </div>
+        <div class="banner__button">
+            <div class="fixed__sign-up__button"
+                 datay-1600="opacity: 0;"
+                 data-1800="display: fixed; top: 10%; right: 6%; opacity: 1">
+                <button><a class="login-sys" href="/learn/" onclick="setCookie(1)">我要报名</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-main="script/activity-main.js" src="script/activity-require.js" defer="defer"></script>
+<script src="script/index.js" defer="defer"></script>
+</body>
+<script>
+    var siemaHuman, siemaBook
+    if (Siema) {
+        siemaHuman = new Siema({
+            selector: '.siema1',
+            perPage: 5,
+            duration: 700,
+            loop: true,
+        });
+        siemaBook = new Siema({
+            selector: '.siema2',
+            duration: 600,
+            perPage: 4,
+            loop: true,
+        });
+    }
+
+    var autoHuman = setInterval(setHuman, 3000);
+
+    function setHuman() {
+        if (siemaHuman.autoPlay) {
+            siemaHuman.next(2);
+        }
+    }
+
+    var autoBook = setInterval(setBook, 3000);
+
+    function setBook() {
+        if (siemaBook.autoPlay) {
+            siemaBook.next();
+        }
+    }
+
+    function createHuman() {
+        siemaHuman.play();
+    }
+
+    function createBook() {
+        siemaBook.play();
+    }
+
+    function clearHuman() {
+        siemaHuman.stop();
+    }
+
+    function clearBook() {
+        siemaBook.stop();
+    }
+
+    function prevArrow(isCoach) {
+        if (isCoach) {
+            siemaHuman.prev(5);
+        } else {
+            siemaBook.prev(5);
+        }
+    }
+
+    function nextArrow(isCoach) {
+        if (isCoach) {
+            siemaHuman.next(5);
+        } else {
+            siemaBook.next(4);
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,6 @@
+{
+  "webApiPrefix": "/learn/api/",
+  "domain": "https://school.thoughtworks.cn",
+  "redirect_uri": "https://school.thoughtworks.cn/learn/weChat-loading.html",
+  "pathPrefix": "/learn"
+}

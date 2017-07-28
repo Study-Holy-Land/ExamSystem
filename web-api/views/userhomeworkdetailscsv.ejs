@@ -1,0 +1,48 @@
+"姓名","电话","邮箱","编程题编号","编程题地址","编程题开始时间","提交次数","编程题花费时间","编程题是否通过","最后一次提交详情","提交历史详情"
+#!!--
+<%
+var hour = constant.time.HOURS_PER_DAY;
+var mintues = constant.time.MINUTE_PER_HOUR;
+var second = constant.time.SECONDS_PER_MINUTE;
+
+var dayToSecond = second * mintues * hour;
+var hourToSecond = second * mintues;
+var mintuesToSecond = mintues;
+var BREAK_LINE_CODE = 10;
+%>
+<% if (userHomeworkDetails) { %>
+<% userHomeworkDetails.forEach(function(userhomework) { %>
+<%= userhomework.name %>,
+<%= userhomework.mobilePhone %>,
+<%= userhomework.email %>,
+<%= userhomework.id %>,
+<%= config.paperApiServer + userhomework.address %>,
+<%= userhomework.startTime === undefined ? '--' : moment.unix(userhomework.startTime).format('YYYY-MM-DD HH:mm:ss') %>,
+<%= userhomework.commitNumbers %>,
+<%= calcHomeworkElapsedTime(userhomework.elapsedTime) %>,
+<%= userhomework.isPassed === constant.homeworkQuizzesStatus.SUCCESS ? '是' : '否' %>,
+"<%= userhomework.lastCommitedDetail.split(String.fromCharCode(BREAK_LINE_CODE)).join('##') %>",
+<%= config.reportCsvAppServer + 'report/paper/' + userhomework.paperId + '/user/' + userhomework.userId + '/homeworkQuiz/' + userhomework.id %>
+#!!--
+<% }); %>
+<% } %>
+<%
+function calcHomeworkElapsedTime(elapsedTime) {
+
+  if (!elapsedTime) {
+    return '--';
+  }
+  var elapsedDay = 0;
+  var elapsedHour = 0;
+  var elapsedMintues = 0;
+  var time = elapsedTime;
+
+  elapsedDay = Math.floor(time / dayToSecond);
+  time -= elapsedDay * dayToSecond;
+  elapsedHour = Math.floor(time / hourToSecond);
+  time -= hourToSecond * elapsedHour;
+  elapsedMintues = Math.floor(time / mintuesToSecond);
+
+  return elapsedDay + '天' + elapsedHour + '小时' + elapsedMintues + '分';
+}
+%>

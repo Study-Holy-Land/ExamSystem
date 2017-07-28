@@ -1,0 +1,34 @@
+[
+  {
+    "description": "should_return_all_paperLists",
+    "request": {
+      "uri": "/papers",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "paperCount": 10,
+        "paperInfo": [
+          {
+            "createTime": 2016,
+            "description": "simple",
+            "id": 1,
+            "makerId": 1,
+            "paperName": "简单的试卷",
+            "programId": 1,
+            "uri": "papers/1"
+          },
+          {
+            "createTime": 2016,
+            "description": "standard",
+            "id": 2,
+            "makerId": 2,
+            "paperName": "一般的试卷",
+            "programId": 3,
+            "uri": "papers/2"
+          }
+        ]
+      }
+    }
+  }
+]

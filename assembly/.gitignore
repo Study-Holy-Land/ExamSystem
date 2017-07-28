@@ -1,0 +1,5 @@
+.release/*.zip
+.release/*.war
+.data/jenkins_home
+jenkins/.ssh/
+ansible-new/*.retry

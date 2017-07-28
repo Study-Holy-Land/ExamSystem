@@ -1,0 +1,16 @@
+[
+  {
+    "description": "should_return_shell_script",
+    "request": {
+      "uri": "/nginx/homework-script/check-readme.sh",
+      "method": "get"
+    },
+    "response": {
+      "headers" : {
+        "content-type" : "application/octet-stream",
+        "Content-Disposition" : "attachment; filename='check-readme.sh'"
+      },
+      "text": "pwd"
+    }
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "_id": "5850c8d65ec9ae3f3ca00674",
+    "userId": 1,
+    "programId": 1,
+    "paperId": 2,
+    "quizzes": [{
+      "id": 1,
+      "startTime": 12345678,
+      "uri": "homeworkQuizzes/1",
+      "userAnswerRepo": "https://github.com/ss/web",
+      "branch": "master",
+      "status": 3,
+      "homeworkSubmitPostHistory": ["572dcf6f041ccfa51fb3f9cb"]
+    }, {
+      "id": 2,
+      "startTime": 12345678,
+      "uri": "homeworkQuizzes/2",
+      "userAnswerRepo": "https://github.com/ss/web",
+      "branch": "master",
+      "status": 1,
+      "homeworkSubmitPostHistory": []
+    }]
+  },
+  {
+    "_id": "585cab566f396a3c00433ae7",
+    "userId": 1,
+    "paperId": 1,
+    "programId": 1,
+    "quizzes": [{
+      "id": 1,
+      "startTime": 12345678,
+      "uri": "homeworkQuizzes/1",
+      "userAnswerRepo": "https://github.com/ss/web",
+      "branch": "master",
+      "status": 3,
+      "homeworkSubmitPostHistory": ["5732ece26eeb5b9a29004a76"]
+    }, {
+      "id": 3,
+      "uri": "homeworkQuizzes/3",
+      "userAnswerRepo": "https://github.com/ss/web",
+      "branch": "master",
+      "status": 1
+    }]
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "description": "should_return_user_detail_when_give_paper_id",
+    "request": {
+      "uri": "/papers/1/usersDetail",
+      "method": "get"
+    },
+    "response": {
+      "json": [
+        {
+          "degree": "本科",
+          "email": "test@163.com",
+          "entranceYear": "2016",
+          "gender": "F",
+          "major": "计算机",
+          "mobilePhone": "18798037893",
+          "name": "测试一",
+          "school": "思沃学院",
+          "schoolCity": "西安",
+          "schoolProvince": "陕西",
+          "userId": 1
+        },
+        {
+          "degree": "本科",
+          "email": "test2@qq.com",
+          "entranceYear": null,
+          "gender": "M",
+          "major": "电工",
+          "mobilePhone": "18087839393",
+          "name": "测试二",
+          "school": "思沃大讲堂",
+          "schoolCity": null,
+          "schoolProvince": null,
+          "userId": 2
+        }
+      ]
+    }
+  }
+]

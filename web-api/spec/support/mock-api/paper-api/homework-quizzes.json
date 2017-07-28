@@ -1,0 +1,90 @@
+[
+  {
+    "description": "should_return_all_homework_quizzes",
+    "request": {
+      "uri": "/homeworkQuizzes",
+      "method": "get"
+    },
+    "response": {
+      "json":
+      {
+        "homeworkQuizzes": [
+          {
+            "answerPath": "/homework-answer/collection-calculate-camp",
+            "createTime": 123450,
+            "description": "## 题目要求\n- 请用javascript语言完成此题\n- 请在开始答题后 `7` 天内完成\n\n------------------   \n## 题目描述\n分别写两个函数，使函数分别满足以下要求：\n```\n1.把二维数组变成一维数组\n输入：[1, [2], [3, 4]]\n输出：[1, 2, 3, 4]\n2.消除重复,按照第一次出现的顺序排列最后的输出结果\n输入：[[1, 2, 3], [5, 2, 1, 4], [2, 1]]\n输出：[1, 2, 3, 5, 4]\n```\n**NOTE：**请注意数据格式\n\n------------\n\n## 答题流程\n1. 请用户仔细阅读题目要求和题目描述",
+            "evaluateScript": "/homework-script/collection-calculate-camp.sh",
+            "homeworkName": "homework5",
+            "id": 5,
+            "makerDetailUri": "users/1/detail",
+            "makerId": 1,
+            "stackId": 1,
+            "templateRepository": "https://github.com/wengjiaojiao/empty-flaten.git",
+            "uri": "homeworkQuizzes/5"
+          },
+          {
+            "answerPath": "/homework-answer/prepos",
+            "createTime": 123450,
+            "description": "## 题目要求\n- 请用javascript语言完成此题\n- 请在开始答题后 `7` 天内完成\n\n------------------\n\n## 题目描述\n题目：集合运算\n\n写一个函数，使该函数满足如下要求：\n选出A集合中与B集合中相同的元素\n\n```\n输入&&输出：\n输入为：\n[\"a\", \"e\", \"h\", \"t\", \"f\", \"c\", \"g\", \"b\", \"d\"];\n[\"a\", \"d\", \"e\", \"f\"];\n\n输出为：\n[\"a\", \"e\", \"f\", \"d\"]\n```\n\n**NOTE：**请注意数据格式\n\n\n------------\n\n## 答题流程\n1. 请用户仔细阅读题目要求和题目描述",
+            "evaluateScript": "/homework-script/prepos.sh",
+            "homeworkName": "homework6",
+            "id": 6,
+            "makerDetailUri": "users/1/detail",
+            "makerId": 1,
+            "stackId": 3,
+            "templateRepository": "https://github.com/Lucky-LengYi/pre-pos-sec-1.git",
+            "uri": "homeworkQuizzes/6"
+          },
+          {
+            "answerPath": "/homework-answer/fibonacci_series",
+            "createTime": 123450,
+            "description": "## 题目要求\n- 请用javascript语言完成此题\n- 请在开始答题后 `7` 天内完成\n\n------------------\n\n## 题目描述\n题目：菲波那切数列  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55\n写出一个生成前n+1个菲波那切数列的函数：\n```\n输入&&输出：\n当输入为1时      输出为 [0,1]\n当输入为2时      输出为 [0,1,1]\n当输入为10时     输出为 [0,1,1,2,3,5,8,13,21,34,55]\n```\n\n**NOTE：**请注意数据格式\n\n------------\n\n## 答题流程\n1. 请用户仔",
+            "evaluateScript": "/homework-script/fibonacci_series.sh",
+            "homeworkName": "homework7",
+            "id": 7,
+            "makerDetailUri": "users/1/detail",
+            "makerId": 1,
+            "stackId": 3,
+            "templateRepository": "https://github.com/sialvsic/fibonacci_series.git",
+            "uri": "homeworkQuizzes/7"
+          },
+          {
+            "answerPath": "/homework-answer/collection",
+            "createTime": 123450,
+            "description": "## 题目要求\n- 请用javascript语言完成此题\n- 请在开始答题后 `7` 天内完成\n\n------------------\n## 题目描述\n写一个可以取出集合中所有偶数的函数，使该函数满足如下要求：\n```\n输入&&输出：\n当输入集合为 [1,2]        输出为 [2]\n当输入集合为 [0,1,2]      输出为 [0,2]\n当输入集合为 [2,4,6]      输出为 [2,4,6]\n```\n\n**NOTE：**请注意数据格式\n\n------------\n\n## 答题流程\n1. 请用户仔细阅读题目要求和题目描述\n\n2. 在命令行中使用以下命令在用户本地任意目录下cl",
+            "evaluateScript": "/homework-script/collection.sh",
+            "homeworkName": "homework8",
+            "id": 8,
+            "makerDetailUri": "users/1/detail",
+            "makerId": 1,
+            "stackId": 3,
+            "templateRepository": "https://github.com/AnliHuer/collection.git",
+            "uri": "homeworkQuizzes/8"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "should_return_one_homework_quiz_when_request_save_one_homework_quiz",
+    "request": {
+      "uri": "/homeworkQuizzes",
+      "method": "post",
+      "json": {
+        "description": "zhangpei",
+        "evaluateScript": "/homework-script/check-readme.sh",
+        "templateRepository": "https://github.com/sialvsic/thousands_separators.git",
+        "makerId": 1,
+        "createTime": 17171,
+        "answerPath": "/homework-answer/prepos",
+        "homeworkName": "homework name"
+      }
+    },
+    "response": {
+      "json": {
+        "uri": "homeworkQuizzes/9"
+      },
+      "status":201
+    }
+  }
+]

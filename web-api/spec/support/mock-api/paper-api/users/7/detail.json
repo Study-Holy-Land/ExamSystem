@@ -1,0 +1,20 @@
+[
+  {
+    "description": "should_return_detail_by_user_id",
+    "request": {
+      "uri": "/users/7/detail",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "email": "admin@admin.com",
+        "id": 7,
+        "mobilePhone": "18711110000",
+        "role": [
+          9
+        ],
+        "userName": "赵思"
+      }
+    }
+  }
+]

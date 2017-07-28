@@ -1,0 +1,103 @@
+[
+  {
+    "description": "should_return_papaers_defination_when_get_paper",
+    "request": {
+      "uri": "/papers/1",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "id": 1,
+        "paperName": "简单的试卷",
+        "sections": [
+          {
+            "description": "这是描述",
+            "id": 1,
+            "quizzes": [
+              {
+                "definition_uri": "blankQuizzes/1",
+                "id": 1,
+                "items_uri": "blankQuizzes/1/items"
+              },
+              {
+                "definition_uri": "blankQuizzes/2",
+                "id": 2,
+                "items_uri": "blankQuizzes/2/items"
+              }
+            ],
+            "sectionType": "blankQuizzes"
+          },
+          {
+            "description": "这是描述",
+            "id": 2,
+            "quizzes": [
+              {
+                "definition_uri": "homeworkQuizzes/1",
+                "id": 1,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "homeworkQuizzes/2",
+                "id": 2,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "homeworkQuizzes/3",
+                "id": 3,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "homeworkQuizzes/4",
+                "id": 4,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "homeworkQuizzes/5",
+                "id": 5,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "homeworkQuizzes/6",
+                "id": 6,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "homeworkQuizzes/7",
+                "id": 7,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "homeworkQuizzes/8",
+                "id": 8,
+                "items_uri": null
+              }
+            ],
+            "sectionType": "homeworkQuizzes"
+          },
+          {
+            "description": "这是描述",
+            "id": 13,
+            "quizzes": [
+              {
+                "definition_uri": "singleChoices/2",
+                "id": 2,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "multipleChoices/2",
+                "id": 2,
+                "items_uri": null
+              },
+              {
+                "definition_uri": "basicBlankQuizzes/2",
+                "id": 2,
+                "items_uri": null
+              }
+            ],
+            "sectionType": "basicQuizzes"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,5 @@
+CREATE TABLE `userRole`(
+`userId` INT (11) NOT NULL,
+`role` INT (11),
+CONSTRAINT `userId_id_1` FOREIGN KEY (`userId`) REFERENCES `users`(`id`)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

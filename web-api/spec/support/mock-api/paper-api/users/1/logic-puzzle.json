@@ -1,0 +1,17 @@
+[
+  {
+    "description": "should_return logic-puzzle_by_user_id",
+    "request": {
+      "uri": "/users/1/logicPuzzle",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "itemNumber": 3,
+        "correctNumber": 0,
+        "startTime": 1451581261,
+        "endTime": 1451581361
+      }
+    }
+  }
+]

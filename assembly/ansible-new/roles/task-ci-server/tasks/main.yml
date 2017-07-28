@@ -1,0 +1,40 @@
+---
+- name: start jenkins
+  shell: docker-compose up -d jenkins-dind && sleep 10s
+  args:
+    chdir: "../"
+
+- name: copy plugin
+  shell: docker cp {{ item }} assembly_jenkins-dind_1:/var/jenkins_home/plugins
+  with_items:
+      - envinject.hpi
+      - git.hpi
+      - postbuildscript.hpi
+      - structs.hpi
+      - workflow-step-api.hpi
+      - flexible-publish.hpi
+      - junit.hpi
+      - run-condition.hpi
+      - token-macro.hpi
+      - git-client.hpi
+      - matrix-project.hpi
+      - scm-api.hpi
+      - workflow-scm-step.hpi
+  args:
+    chdir: "{{ project_root }}/assembly/jenkins/plugins"
+
+- name: restore jenkins configration
+  shell: docker exec assembly_jenkins-dind_1 bash -c "cd /var/jenkins_home/jobs && (  ( [ -d {{ item.name }} ] && rm -rf {{ item.name }} && mkdir {{ item.name }} ) || mkdir {{ item.name }} )"
+        && docker cp {{ project_root }}/assembly/jenkins/{{ item.name }}/config.xml assembly_jenkins-dind_1:/var/jenkins_home/jobs/{{ item.name }}
+  with_items:
+    - { name: ADD_HOMEWORK }
+    - { name: ADD_IMAGE }
+    - { name: HOMEWORK_SCORING }
+  tags:
+    - config
+
+
+- name: restart jenkins
+  shell: "docker-compose restart jenkins-dind"
+  args:
+    chdir: "../"

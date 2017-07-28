@@ -1,0 +1,32 @@
+{
+  "_id": "57303a24aae48e0e65cd8db7",
+  "paperName": "java 基础测验",
+  "isPublished": true,
+  "groupId": 1,
+  "groupHashId": "57231289d46aebaca22c08fe",
+  "makerId": 2,
+  "updateTime": 1462764146,
+  "createTime": 1462764060,
+  "logicPuzzleSections": [
+    {
+      "easyCount": 3,
+      "normalCount": 4,
+      "hardCount": 3,
+      "_id": "57303a24aae48e0e65cd8db9"
+    }
+  ],
+  "homeworkSections": [
+    {
+      "_id": "573169c72cf15ff4104609a5",
+      "items": [{
+        "definitionRepo": "https://github.com/zhangsan/posv_2",
+        "branch": "master",
+        "templateRepo": "https://github.com/zhangsan/pos_template",
+        "descriptionAddress": "https://github.com/zhangsan/posv_2/description.md",
+        "inspectionAddress": "https://github.com/zhangsan/posv_2/inspection.sh",
+        "_id": "57303a24aae48e0e65cd8db8"
+      }]
+
+    }
+  ]
+}

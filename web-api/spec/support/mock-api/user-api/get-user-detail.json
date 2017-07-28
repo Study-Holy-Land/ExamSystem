@@ -1,0 +1,46 @@
+[
+  {
+    "description": "should_return_user_detail",
+    "request": {
+      "uri": "/users/1/detail",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "schoolCity": "西安",
+        "schoolProvince": "陕西",
+        "major": "计算机",
+        "gender": "F",
+        "mobilePhone": "18798037893",
+        "school": "思沃学院",
+        "entranceYear": "2016",
+        "name": "测试一",
+        "degree": "本科",
+        "userId": 1,
+        "email": "test@163.com"
+      }
+    }
+  },
+  {
+    "description": "should_return_user_detail",
+    "request": {
+      "uri": "/users/2/detail",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "schoolCity": "西安",
+        "schoolProvince": "陕西",
+        "major": "计算机",
+        "gender": "F",
+        "mobilePhone": "18798037893",
+        "school": "思沃学院",
+        "entranceYear": "2016",
+        "name": "测试一",
+        "degree": "本科",
+        "userId": 1,
+        "email": "test@163.com"
+      }
+    }
+  }
+]

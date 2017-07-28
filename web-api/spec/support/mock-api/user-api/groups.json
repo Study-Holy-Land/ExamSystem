@@ -1,0 +1,37 @@
+[
+  {
+    "description": "should_return_uri_with_group_id",
+    "request": {
+      "uri": "/groups",
+      "method": "post",
+      "json": {
+        "name": "twars",
+        "avatar": "",
+        "isAnnouncePublished": true,
+        "announcement": "fffffff"
+      }
+    },
+    "response": {
+      "json": {
+        "uri": "/group/1",
+        "status": 201
+      }
+    }
+  },
+  {
+    "description": "should_return_200_when_update_successfully",
+    "request": {
+      "uri": "/groups/1",
+      "method": "put",
+      "json": {
+        "name": "twars",
+        "avatar": "",
+        "isAnnouncePublished": true,
+        "announcement": "fffffff"
+      }
+    },
+    "response": {
+      "json": {"status": 200, "uri": "group/1"}
+    }
+  }
+]

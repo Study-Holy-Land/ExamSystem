@@ -1,0 +1,10 @@
+[
+  {
+    "_id": "58d33fc52150b31be086c794",
+    "id": 1,
+    "type": "SINGLE_CHOICE",
+    "options": "1,2,3,4",
+    "answer": "3",
+    "__t": "BasicQuiz"
+  }
+]

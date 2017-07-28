@@ -1,0 +1,10 @@
+---
+- name: create gradle.properties
+    template:
+      src: "gradle.properties.j2"
+      dest: "../../paper-api/gradle.properties"
+
+- name: migrate
+    shell: ./gradlew flywaymigrate
+    args:
+      chdir: "../../paper-api"

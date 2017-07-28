@@ -1,0 +1,30 @@
+{
+  "task": {
+    "taskApi": "http://jenkins-dind:8080/job/HOMEWORK_SCORING/buildWithParameters",
+    "buildImage": "http://jenkins-dind:8080/job/ADD_IMAGE/buildWithParameters",
+    "callback_url": "http://web-api:3000/stack-definitions",
+    "addHomework": "http://jenkins-dind:8080/job/ADD_HOMEWORK/buildWithParameters",
+    "user": "admin",
+    "password": "admin",
+    "hookUrl": "http://web-api:3000",
+    "callbackTaskUrl":"http://web-api:3000/quiz/scoring/",
+    "getJenkinsLogs":"http://jenkins-dind:8080/job/"
+  },
+  "staticFileServer": "/learn/fs/",
+  "database": "mongodb://mongo:27017/twars",
+  "paperApiServer": "http://paper-api:8080/paper-api/",
+  "appServer": "http://web-api:3000/",
+  "nginxServer": "http://nginx:80/fs",
+  "globalVars": {
+    "featureToggle": {
+      "che": true
+    }
+  },
+  "domain": "https://school.thoughtworks.cn/",
+  "path_prefix":"learn/",
+  "sendCloud":{
+    "api_user": "Youruyu0310_test_ix0A9V",
+    "api_key":"JrfJtutsE5z9J9O1",
+    "source":"18829290140@163.com"
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "description": "should_return_connected",
+    "request": {
+      "uri": "/inspector",
+      "method": "get"
+    },
+    "response": {
+      "json": {"mysql":"connected","api":"connected"}
+    }
+  }
+]
+

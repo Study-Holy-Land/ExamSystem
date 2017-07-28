@@ -1,0 +1,27 @@
+[
+  {
+    "description": "should_return_logic_puzzle_when_give_paper_id",
+    "request": {
+      "uri": "/papers/1/logicPuzzle",
+      "method": "get"
+    },
+    "response": {
+      "json": [
+        {
+          "correctNumber": 0,
+          "endTime": 1451581361,
+          "itemNumber": 10,
+          "startTime": 1451581261,
+          "userId": 1
+        },
+        {
+          "correctNumber": 0,
+          "endTime": 1451581360,
+          "itemNumber": 10,
+          "startTime": 1451581261,
+          "userId": 2
+        }
+      ]
+    }
+  }
+]

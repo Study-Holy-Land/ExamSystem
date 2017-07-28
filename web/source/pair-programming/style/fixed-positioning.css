@@ -1,0 +1,16 @@
+.skrollable {
+    position:fixed;
+    z-index:5;
+}
+
+.skrollable .banner__logo {
+    z-index:10;
+}
+
+.skrollr-mobile .skrollable {
+    position:absolute;
+}
+
+.skrollable .skrollable {
+    position:absolute;
+}

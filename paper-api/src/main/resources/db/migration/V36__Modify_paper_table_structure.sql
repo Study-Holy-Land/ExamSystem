@@ -1,0 +1,1 @@
+ALTER TABLE paper DROP paperType;

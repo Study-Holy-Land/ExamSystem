@@ -1,0 +1,41 @@
+[{
+  "description": "should_return_all_blank_quizzes",
+  "request": {
+    "uri": "/blankQuizzes",
+    "method": "get"
+  },
+  "response":{
+    "json": [
+      {
+        "uri":"blankQuizzes/1"},
+      {
+        "uri":"blankQuizzes/2"},
+      {
+        "uri":"blankQuizzes/3"},
+      {
+        "uri":"blankQuizzes/4"},
+      {
+        "uri":"blankQuizzes/5"},
+      {
+        "uri":"blankQuizzes/6"}
+    ]
+  }
+}, {
+  "description": "should_return_new_blank_quizzes_id",
+  "request": {
+    "uri": "/blankQuizzes",
+    "method": "post",
+    "json": {
+      "hardCount":3,
+      "normalCount":3,
+      "easyCount":3,
+      "exampleCount":2
+    }
+  },
+  "response": {
+    "status" : 201,
+    "json": {"id":7,
+      "uri":"blankQuizzes/7"}
+  }
+}
+]

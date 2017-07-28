@@ -1,0 +1,8 @@
+  exist="$(curl -I -X HEAD http://localhost:8088/job/TASK-RUNNER 2>/dev/null  | head -n 1 | cut -d$' ' -f2)"
+
+  if [ "$exist" == 302 ]
+  then
+    echo "存在"
+  else
+    echo 
+  fi

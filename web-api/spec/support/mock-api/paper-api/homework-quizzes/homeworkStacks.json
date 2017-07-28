@@ -1,0 +1,48 @@
+[
+  {
+    "description": "should_return_homework_stacks_when_request_stacks",
+    "request": {
+      "uri": "/stacks",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "items": [
+          {
+            "definition": "php:5",
+            "description": "这是Php",
+            "stackId": 1,
+            "title": "PHP"
+          },
+          {
+            "definition": "python:2",
+            "description": "这是Python",
+            "stackId": 2,
+            "title": "Python"
+          },
+          {
+            "definition": "ruby:1",
+            "description": "这是Ruby",
+            "stackId": 3,
+            "title": "Ruby"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "should_return_homework_stacks_when_request_stacks",
+    "request": {
+      "uri": "/stacks/1",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "definition": "php:5",
+        "description": "这是Php",
+        "stackId": 1,
+        "title": "PHP"
+      }
+    }
+  }
+]

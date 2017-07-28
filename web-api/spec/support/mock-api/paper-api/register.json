@@ -1,0 +1,25 @@
+[
+  {
+    "description": "should_register_a_user",
+    "request": {
+      "uri": "/register",
+      "method": "post",
+      "json": {
+        "mobilePhone": "18749265937",
+        "email": "eujd@q.com",
+        "password": "12345678"
+      }
+    },
+    "response": {
+      "json": {
+        "userInfo": {
+          "uri": "userInfo/9"
+        },
+        "id": 9,
+        "user": {
+          "uri": "user/9"
+        }
+      }
+    }
+  }
+]

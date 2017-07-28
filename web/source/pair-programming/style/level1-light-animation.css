@@ -1,0 +1,223 @@
+@keyframes light-space-animation {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+.level1__background-red1 {
+    position: relative;
+    height: 1px;
+    width: 24%;
+    background: linear-gradient(90deg, transparent 0%, red 0%, red 100%, transparent 100%);
+}
+
+.level1__background-red1--space {
+    animation: 3s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 3px;
+    width: 10%;
+}
+
+.level1__background-red1--position {
+    transform: rotate(-67deg);
+    position: absolute;
+    width: 100%;
+    top: -108%;
+    left: 29%;
+}
+
+.level1__background-orange1 {
+    position: relative;
+    height: 2px;
+    width: 10%;
+    background: linear-gradient(90deg, transparent 0%, orange 0%, orange 100%, transparent 100%);
+}
+
+.level1__background-orange1--space {
+    animation: 1s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 4px;
+    width: 10%;
+}
+
+.level1__background-orange1--position {
+    position: absolute;
+    width: 100%;
+    top: -79%;
+    transform: rotate(-50deg);
+    left: 44%;
+}
+
+.level1__background-orangered1 {
+    position: relative;
+    height: 3px;
+    width: 16%;
+    background: linear-gradient(90deg, transparent 0%, orangered 0%, orangered 100%, transparent 100%);
+}
+
+.level1__background-orangered1--space {
+    animation: 2s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 5px;
+    width: 10%;
+}
+
+.level1__background-orangered1--position {
+    position: absolute;
+    width: 100%;
+    top: 167%;
+    transform: rotate(38deg);
+    left: 57%;
+}
+
+.level1__background-red2 {
+    position: relative;
+    height: 1px;
+    width: 12%;
+    background: linear-gradient(90deg, transparent 0%, red 0%, red 100%, transparent 100%);
+}
+
+.level1__background-red2--space {
+    animation: 2s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 3px;
+    width: 10%;
+}
+
+.level1__background-red2--position {
+    position: absolute;
+    width: 100%;
+    top: 194%;
+    transform: rotate(51deg);
+    left: 45%;
+}
+
+.level1__background-orange2 {
+    position: relative;
+    height: 2px;
+    width: 11%;
+    background: linear-gradient(90deg, transparent 0%, orange 0%, orange 100%, transparent 100%);
+}
+
+.level1__background-orange2--space {
+    animation: 2s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 4px;
+    width: 8%;
+}
+
+.level1__background-orange2--position {
+    position: absolute;
+    width: 100%;
+    top: 207%;
+    transform: rotate(120deg);
+    left: -30%;
+}
+
+.level1__background-orangered2 {
+    position: relative;
+    height: 3px;
+    width: 25%;
+    background: linear-gradient(90deg, transparent 0%, orangered 0%, orangered 100%, transparent 100%);
+}
+
+.level1__background-orangered2--space {
+    animation: 3s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 5px;
+    width: 10%;
+}
+
+.level1__background-orangered2--position {
+    position: absolute;
+    width: 100%;
+    transform: rotate(136deg);
+    left: -51%;
+    top: 187%;
+}
+
+.level1__background-red3 {
+    position: relative;
+    height: 1px;
+    width: 23%;
+    background: linear-gradient(90deg, transparent 0%, red 0%, red 100%, transparent 100%);
+}
+
+.level1__background-red3--space {
+    animation: 2s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 3px;
+    width: 10%;
+}
+
+.level1__background-red3--position {
+    position: absolute;
+    width: 100%;
+    transform: rotate(167deg);
+    left: -72%;
+    top: 82%;
+}
+
+.level1__background-red4 {
+    position: relative;
+    height: 1px;
+    width: 34%;
+    background: linear-gradient(90deg, transparent 0%, red 0%, red 100%, transparent 100%);
+}
+
+.level1__background-red4--space {
+    animation: 4s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 3px;
+    width: 10%;
+}
+
+.level1__background-red4--position {
+    position: absolute;
+    width: 100%;
+    transform: rotate(212deg);
+    top: -76%;
+    left: -64%;
+}
+
+.level1__background-orange3 {
+    position: relative;
+    height: 3px;
+    width: 9%;
+    background: linear-gradient(90deg, transparent 0%, orange 0%, orange 100%, transparent 100%);
+}
+
+.level1__background-orange3--space {
+    animation: 2s light-space-animation linear infinite;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #1c1c1c 0%, #1c1c1c 100%, transparent 100%);
+    height: 5px;
+    width: 10%;
+}
+
+.level1__background-orange3--position {
+    position: absolute;
+    width: 100%;
+    transform: rotate(-134deg);
+    top: -114%;
+    left: -57%;
+}
+
+.light-relative-position {
+    width: 70%;
+    height: 100%;
+    position: relative;
+}

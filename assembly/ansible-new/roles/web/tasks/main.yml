@@ -1,0 +1,18 @@
+---
+
+- name: zip web
+  local_action: shell cd /home/afaren/workspace/recruiting-system && 7z a -t7z ./web.7z ./web
+
+- name: copy
+  copy:
+    src: /home/afaren/workspace/recruiting-system/web.7z
+    dest: /tmp
+  tags:
+    - copy
+
+- name: unzip
+  shell: 7z x -y /tmp/web.7z -o./  && rm web.7z
+  args:
+    chdir: /tmp
+  tags:
+    - unzip

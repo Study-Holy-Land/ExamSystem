@@ -1,0 +1,8 @@
+default:
+  port: 4000
+  redisServerIp: 'redis'
+  redisServerPort: '6379'
+  CIServer: 'http://jenkins-nodejs:8080'
+  jobName: 'TASK-RUNNER'
+  nginxServer: 'http://nginx/fs'
+  taskServer: 'http://node-task-queue'

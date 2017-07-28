@@ -1,0 +1,26 @@
+server {
+
+  location / {
+    alias /Users/wjlin/works/coach/056-recruiting-system/web/public/assets/;
+  }
+
+  location /api {
+    proxy_pass http://localhost:3000;
+    rewrite /api/(.+)$ /$1 break;
+  }
+
+  location /fs/ {
+      alias  /var/fs/;
+      expires      10s;
+  }
+
+	location "/teacher-admin-web" {
+     root  /Users/wjlin/works/coach/056-recruiting-system/teacher-admin-web/public/assets/;
+     rewrite '^(.*)$' '/index.html' break;
+  }
+
+  location ~ "^/teacher-admin-web(.*)\.(js|css|map|png|woff2|woff|ttf)$" {
+      root /Users/wjlin/works/coach/056-recruiting-system/teacher-admin-web/public/assets/;
+      rewrite ^/teacher-admin-web/(.*)$ /$1 break;
+  }
+}

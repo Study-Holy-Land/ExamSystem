@@ -1,0 +1,89 @@
+@import "common/color.less";
+
+#studentList-header {
+  padding: 0 15px 0 15px;
+
+  .header {
+    padding-top: 10px;
+
+    .table-header {
+      background-color: @blue;
+      color: @white;
+      font-size: 14px;
+      line-height: 38px;
+      padding-left: 12px;
+      margin-bottom: 1px;
+      clear: right;
+    }
+  }
+}
+
+#studentList-form {
+  padding: 0 15px 0 15px;
+  .table-form {
+    padding: 0;
+    .form-title {
+      color: @grey;
+      background: repeat-x #F2F2F2;
+    }
+    .select-all {
+      cursor: pointer;
+    }
+    .table-striped {
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: #E9F1F6;
+        }
+        tr {
+          td {
+            padding: 12px;
+            text-align: center;
+          }
+          .not-active {
+            pointer-events: none;
+            cursor: not-allowed;
+            color: @grey;
+          }
+        }
+      }
+      thead {
+        color: #707070;
+        background-color: #F2F2F2;
+        tr {
+          th {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .table-bordered {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#paperList-footer {
+  padding: 0 15px 0 15px;
+  .form-footer {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px;
+    margin: 0;
+    background-color: #EFF3F8;
+    cursor: pointer;
+
+    .dataTable-pagination {
+      text-align: right;
+    }
+    .pagination {
+      margin: 0 12px;
+      display: inline-block;
+      li {
+        display: inline;
+        a {
+          border-radius: 0
+        }
+      }
+    }
+  }
+}

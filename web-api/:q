@@ -1,0 +1,13 @@
+[1mdiff --git a/services/report-service/export-csv.js b/services/report-service/export-csv.js[m
+[1mindex 9f2c8cd..dac3e05 100644[m
+[1m--- a/services/report-service/export-csv.js[m
+[1m+++ b/services/report-service/export-csv.js[m
+[36m@@ -169,7 +169,7 @@[m [mclass ExportCsvService {[m
+         userData = userData.map((user) => {[m
+           const link = {paperId, userId: user.userId};[m
+           const homeworkExist = isHomeworkExist(sections);[m
+[31m-          const href = homeworkExist ? `http://show-case.thoughtworks.school:8888/api/reports/3?data=${encodeURIComponent(JSON.stringify(link))}` : '';[m
+[32m+[m[32m          const href = homeworkExist ? `${DOMAIN}${PATH_PREFIX}api/reports/3?data=${encodeURIComponent(JSON.stringify(link))}` : '';[m
+ [m
+           return Object.assign({}, user, {link: href});[m
+         });[m

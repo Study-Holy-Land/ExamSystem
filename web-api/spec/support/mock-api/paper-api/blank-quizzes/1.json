@@ -1,0 +1,15 @@
+[
+  {
+    "description": "should_return_blank_quizzes_by_section",
+    "request": {
+      "uri":"/blankQuizzes/1",
+      "method": "get"
+    },
+    "response": {
+      "json": [
+        {"easyCount":4,"exampleCount":2,"hardCount":3,"normalCount":3,"id":1},
+        {"easyCount":4,"exampleCount":2,"hardCount":3,"normalCount":3,"id":2}
+      ]
+    }
+  }
+]

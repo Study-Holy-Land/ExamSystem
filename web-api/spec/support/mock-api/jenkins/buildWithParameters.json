@@ -1,0 +1,12 @@
+[
+  {
+    "description": "should_return_connected",
+    "request": {
+      "uri": "/job/HOMEWORK-SCORING/buildWithParameters",
+      "method": "post"
+    },
+    "response": {
+      "status": 201
+    }
+  }
+]

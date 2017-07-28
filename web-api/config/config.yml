@@ -1,0 +1,37 @@
+#default:
+#  port: 3000
+#  database: 'mongodb://mongo/twars'
+#  paperApiServer: 'http://localhost:8080/paper-api/'
+#  userApiServer: 'http://user-api:8080/user-api/'
+#  reportCsvAppServer: 'http://192.168.99.100:8888/api/'
+#  appServer: 'http://localhost:3000/'
+#  nginxServer: 'http://localhost/fs'
+#  taskApi: 'http://10.205.125.61:9090/job/HOMEWORK_SCORING/buildWithParameters'
+#  callbackTaskUrl: 'http://10.205.124.117/api/homework/scoring/'
+#  staticFileServer: 'http://localhost/fs/'
+#  sessionTtl: 3600 # 60(MINUTE_PER_HOUR) * 60(SECONDS_PER_MINUTE) const
+#  emailServer: '192.168.99.100:8888'
+#  emailAccount: 'twarss@163.com'
+#  emailPassword: 'ssww123456'
+#  gitHubToken: 'Basic dHdhcnM6c3cxMjM0NTY3OA=='
+#  QAInfoAddress: ''
+#show-case:
+#  staticFileServer: '/fs/'
+#  database: 'mongodb://mongo/twars'
+#  paperApiServer: 'http://paper-api:8080/paper-api/'
+#  appServer: 'http://web-api:3000/'
+#  taskApi: 'http://jenkins:8080/job/HOMEWORK_SCORING/buildWithParameters'
+#  homeworkCreationTaskApi: 'http://jenkins:8080/job/ADD_HOMEWORK/buildWithParameters'
+#  nginxServer: 'http://nginx/fs/'
+#  callbackTaskUrl: 'http://web-api:3000/homework/scoring/'
+#integration:
+#  paperApiServer: 'http://localhost:12306/'
+#  userApiServer: 'http://localhost:12306/'
+#  database: 'mongodb://localhost/twars'
+#  taskApi: 'http://localhost:12306/job/HOMEWORK-SCORING/buildWithParameters'
+#  nginxServer: 'http://localhost:12306/nginx'
+
+#production:
+#  staticFileServer: '/fs/'
+#  emailServer: 'academy.thoughtworks.cn'
+#  reportCsvAppServer: 'http://academy.thoughtworks.cn/api/'

@@ -1,0 +1,6 @@
+{
+	"webApiPrefix": "/learn-demo/api",
+	"pathPrefix": "/learn-demo",
+  "domain": "https://school.thoughtworks.cn"
+}
+

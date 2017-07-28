@@ -1,0 +1,903 @@
+body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family:"Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+button a {
+    color: #1c1c1c;
+    display: inline-block;
+    width:100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.relative_the_section {
+    position: relative;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.level1__body__height, .level2__body__height, .level3__body__height {
+    height: 50%;
+}
+
+.column_width_height_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.banner {
+    background-color: rgba(193, 193, 193, .1);
+    width: 100%;
+    z-index: 6;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banner__logo {
+    position: relative;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.banner__button {
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+
+.fixed__sign-up__button {
+    border: none;
+    border-radius: 0.2rem;
+    background: #f8e952;
+    font-size: 0.5rem;
+    width: 50%;
+    top: 0%;
+    right: 0%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed__sign-up__button:hover {
+    box-shadow: 0 0 0.3rem rgba(248,233,116, 0.8);
+}
+
+.fixed__sign-up__button button {
+    border: none;
+    background: #f8e952;
+    font-size: 0.5rem;
+    width:100%;
+}
+
+.begin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.begin__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 8%;
+    width: 70%;
+    font-size: 0.5rem;
+}
+
+.begin__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.begin__pair-programming,
+.begin__pair-programming-cn,
+.begin__pear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.begin__pear {
+    width: 15%;
+}
+
+.begin__pair-programming {
+    width: 50%;
+}
+
+.begin__pair-programming-cn {
+    width: 20%;
+}
+
+.begin__sign-up__ground {
+    width: 100%;
+}
+
+.begin__sign-up {
+    position: relative;
+    width: 90%;
+}
+
+.begin__sign-up__button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 5%;
+    right: 37%;
+    width: 26%;
+    height: 13%;
+    border: none;
+    border-radius: 0.2rem;
+    background: #f8e952;
+    font-size: 0.5rem;
+    padding: 0.2rem 0;
+}
+
+.begin__sign-up__button:hover {
+    box-shadow: 0 0 0.3rem rgba(248,233,116, 0.8);
+}
+
+.begin__sign-up__button button {
+    border: none;
+    background: #f8e952;
+    font-size: 0.5rem;
+    width:100%;
+}
+
+.heavenly-body__left1 {
+    position: absolute;
+    left: 3%;
+    width: 7%;
+}
+
+.heavenly-body__left2 {
+    position: absolute;
+    left: 11%;
+    width: 4%;
+}
+
+.heavenly-body__left3 {
+    position: absolute;
+    width: 4%;
+    left: 21%;
+}
+
+.heavenly-body__right1 {
+    position: absolute;
+    width: 6%;
+    right: 8%;
+}
+
+.heavenly-body__right2 {
+    position: absolute;
+    width: 7%;
+    right: 7%;
+}
+
+.heavenly-body__right3 {
+    position: absolute;
+    width: 4%;
+    right: 19%;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.video__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5rem;
+    height: 5%;
+    width: 70%;
+    text-transform: uppercase;
+}
+
+.video__body {
+    position: relative;
+    padding-bottom: 40%;
+    width: 70%;
+    border: 1px solid #f8e952;
+}
+
+.video-frame__layer1 {
+    padding-bottom: 50%;
+    height: 0;
+    width: 77%;
+    left: 12%;
+    right: 12%;
+    border: 1px solid #f8e952;
+
+}
+
+.video-frame__layer2 {
+    height: 0;
+    width: 63%;
+    left: 19%;
+    right: 19%;
+    padding-bottom: 40%;
+    border: 1px solid #f8e952;
+
+}
+
+.video-frame__layer3 {
+    height: 0;
+    width: 58%;
+    left: 21%;
+    right: 21%;
+    padding-bottom: 37%;
+    border: 1px solid #f8e952;
+
+}
+
+.video-frame__layer4 {
+    height: 0;
+    width: 48%;
+    left: 26%;
+    right: 26%;
+    padding-bottom: 27%;
+    border: 1px solid #f8e952;
+}
+
+.video__body__background {
+    position: relative;
+}
+
+.video__body__watch-video {
+    width: 35%;
+    left: 34%;
+}
+
+.video__body__watch-video-cn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.video__body__watch-video-cn img {
+    position: absolute;
+    width: 40%;
+}
+
+.video__body__watch-video-cn video {
+    width: 100%;
+    z-index: 2;
+}
+
+.level1__header, .level2__header, .level3__header {
+    z-index: 1;
+    height: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.level1__header img, .level2__header img, .level3__header img {
+    width: 50%;
+    padding-bottom: 1rem;
+}
+
+.level1, .level2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.level1__body {
+    position: relative;
+}
+
+.level1__keys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.level1__keys--row, .level1__keys--row2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    padding: 1rem 0;
+}
+
+.level1__keys--row img, .level1__keys--row2 img {
+    width: 15%;
+}
+
+.level1__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.keep-width-element {
+    height: 1px;
+    visibility: hidden
+}
+
+.level1__time, .level2__time, .level3__time {
+    display: block;
+    font-size: 0.5rem;
+    padding-top: 1rem;
+}
+
+.level1__number, .level1__tiled, .level2__number, .level2__tiled {
+    font-size: 1.0rem;
+    font-weight: bolder;
+}
+
+.level1__tiled, .level2__tiled {
+    color: gray;
+}
+
+.level1__description, .level2__description, .level3__description {
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+.level2__body {
+    position: relative;
+}
+
+.level1-level2-level3__back-ground {
+    background-image:url(../img/background.png);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.level2__body__floor-back-ground :nth-child(1) {
+    visibility: hidden;
+}
+
+.level2__body__floor-back-ground {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.level2__body__floor {
+    width: 100%;
+}
+
+.level2__body__floor-light {
+    position: absolute;
+    bottom: 0%;
+    left: 44%;
+}
+
+.level2__body__mac {
+    position: absolute;
+    width: 24%;
+    top: 0%;
+    right: 38%;
+}
+
+.level2__body__pear {
+    position: absolute;
+    width: 55%;
+    top: 15%;
+    left: 31%;
+}
+
+.level2__body__pear-mouth {
+    position: absolute;
+    top: 42%;
+    width: 5%;
+    left: 66%;
+}
+
+.level2__body__pear-eye-white {
+    position: absolute;
+    top: 35%;
+    width: 28%;
+    left: 55%;
+}
+
+.level2__body__hand {
+    position: absolute;
+    top: 41%;
+    width: 15%;
+    left: 38%;
+}
+
+.level2__body__pear-eye-ball {
+    position: absolute;
+    top: 35%;
+    width: 23%;
+    left: 55%;
+}
+
+.heavenly-body__light1 {
+    position: absolute;
+    width: 3%;
+    top: 4%;
+    right: 33%;
+}
+
+.heavenly-body__light2 {
+    position: absolute;
+    width: 4%;
+    top: 13%;
+    right: 32%;
+}
+
+.heavenly-body__light3 {
+    position: absolute;
+    width: 4%;
+    top: 25%;
+    right: 32%;
+}
+
+.heavenly-body__light4 {
+    position: absolute;
+    width: 2%;
+    top: 35%;
+    right: 34%;
+}
+
+.level2__description__note, .level3__description__note {
+    color: #f8e952;
+    padding: 0.5rem 0;
+}
+
+.level3 {
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.level3__body {
+    position: relative;
+    max-width: 140rem;
+}
+
+.level3__background {
+    position: relative;
+}
+
+.level3__background-vertical {
+    position: absolute;
+    top: 0%;
+    right: 40%;
+    width: 19%;
+}
+
+.level3__hands {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.level3__hands img {
+    width: 40%;
+}
+
+.star__red1 {
+    position: absolute;
+    width: 4%;
+    bottom: -5%;
+    right: 20%;
+}
+
+.star__red2 {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    right: 32%;
+}
+
+.star__red3 {
+    position: absolute;
+    width: 2%;
+    top: 30%;
+    left: 45%;
+}
+
+.star__yellow1 {
+    position: absolute;
+    width: 4%;
+    top: 57%;
+    left: 3%;
+}
+
+.star__yellow2 {
+    position: absolute;
+    width: 2%;
+    bottom: 3%;
+    left: 29%;
+}
+
+.star__orange1 {
+    position: absolute;
+    width: 2%;
+    bottom: 31%;
+    right: 40%;
+}
+
+.star__orange2 {
+    position: absolute;
+    width: 3%;
+    top: 12%;
+    left: 24%;
+}
+
+.star__orange3 {
+    position: absolute;
+    width: 3%;
+    top: 26%;
+    right: 8%;
+}
+
+/*---------------------------------------------activity-start-----------------------------------------------*/
+.activity, .awards {
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.activity-and-award {
+    top: 0%;
+    height: 100%;
+    width: 100%;;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.activity-detail {
+    background-color: #3C3C3C;
+    font-size: .6rem;
+    width: 70%;
+}
+
+.activity-detail-content {
+    padding: 1rem;
+}
+
+.activity-detail__target, .activity-detail__process {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.activity-detail__target {
+}
+
+.activity-detail__process {
+    position: relative;
+    color: #E4F02A;
+}
+
+.activity-detail__process--head {
+    font-weight: bold;
+}
+
+.activity-detail__process--level {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.activity-detail__process--level .num {
+    align-items: flex-start;
+    padding-right: .5rem;
+}
+
+.activity-detail__process--level .desciption {
+    flex: 9;
+    align-items: flex-start;
+}
+
+.activity-detail__process--end {
+    width: 75%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/*---------------------------------------------awards-start-----------------------------------------------*/
+.awards {
+    position: relative;
+    width: 100%;
+}
+
+.awards__header {
+    text-align: center;
+}
+
+.coaches__photos, .books__covers {
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .books__covers img {
+        width: 60px;
+    }
+
+    .human-display img {
+        width: 50px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    .books__covers img {
+        width: 90px;
+    }
+
+    .human-display img {
+        width: 75px;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+    .books__covers img {
+        width: 130px;
+    }
+
+    .human-display img {
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .books__covers img {
+        width: 200px;
+    }
+
+    .human-display img {
+        width: 171px;
+    }
+}
+
+.about-us__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-us__tw {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thought-works-logo {
+    vertical-align: middle;
+    width: 50%;
+}
+
+.about-us__tw__detail {
+    font-size: 0.5rem;
+    padding-bottom: .5rem;
+}
+
+.about-us__code {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.about-us__interactive {
+    font-size: 0.5rem;
+    padding: 1rem 0;
+}
+
+.about-us__QR-Code {
+    width: 50%;
+}
+
+.background-bottom {
+    margin-top: -20%;
+}
+
+.foot {
+    align-items: flex-start;
+    color: gray;
+    font-size: 0.5rem;
+}
+
+.foot__entry-point {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+}
+
+.foot__copy-right {
+
+}
+
+.last-part-do-not-parallax {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coaches, .books {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+}
+
+.books__right-arrow, .coaches__right-arrow {
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    right: -50px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-image: url('../img/right-arrow.png');
+    background-size: 30px 30px;
+}
+
+.books__left-arrow, .coaches__left-arrow {
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    left: -40px;
+    background-size: 30px 30px;
+    background-position: 20px;
+    background-repeat: no-repeat;
+    background-image: url('../img/left-arrow.png');
+}
+
+.bounce-right {
+  -moz-animation: bounce-right 2s infinite;
+  -webkit-animation: bounce-right 2s infinite;
+  animation: bounce-right 2s infinite;
+}
+
+@keyframes bounce-right {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(30px);
+  }
+  60% {
+    transform: translateX(15px);
+  }
+}
+
+.bounce-left {
+  -moz-animation: bounce-left 2s infinite;
+  -webkit-animation: bounce-left 2s infinite;
+  animation: bounce-left 2s infinite;
+}
+
+@keyframes bounce-left {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-30px);
+  }
+  60% {
+    transform: translateX(-15px);
+  }
+}
+
+.human-display {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.human-display:hover .instruction {
+    display: block;
+}
+
+.instruction {
+    font-size: 0.45em;
+    color: white;
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    padding-left: 7%;
+    padding-right: 7%;
+    top: 0;
+    background-color: rgba(140, 16, 24, .6);
+    display: none;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+/*-----------------------------------------------loading-start-----------------------------------------------*/
+#over {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c1c1c1;
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+#layout {
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 20%;
+    height: 20%;
+    z-index: 1001;
+    text-align: center;
+}
+
+#main {
+ opacity: 0;
+}
+/*-----------------------------------------------loading-end-----------------------------------------------*/

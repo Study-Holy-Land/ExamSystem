@@ -1,0 +1,11 @@
+UPDATE paper SET paperType="practice" WHERE id=1;
+UPDATE paper SET paperType="practice" WHERE id=2;
+UPDATE paper SET paperType="exam" WHERE id=3;
+UPDATE paper SET paperType="practice" WHERE id=4;
+UPDATE paper SET paperType="exam" WHERE id=5;
+UPDATE paper SET paperType="exam" WHERE id=6;
+UPDATE paper SET paperType="practice" WHERE id=7;
+UPDATE paper SET paperType="exam" WHERE id=8;
+UPDATE paper SET paperType="practice" WHERE id=9;
+UPDATE paper SET paperType="exam" WHERE id=10;
+UPDATE paper SET paperType="exam" WHERE id=11;

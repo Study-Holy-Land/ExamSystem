@@ -1,0 +1,17 @@
+{
+    "script": "app",
+    "ext": "js json",
+    "ignore": [
+        "mixin/*",
+        "public/*",
+        "__tests__/*",
+        "gulp/*",
+        "node_modules/*",
+        "source/*",
+        "tools/*",
+        "doc/*",
+        "gulpfile.js",
+        "package.json",
+        "webpack.config.js"
+    ]
+}

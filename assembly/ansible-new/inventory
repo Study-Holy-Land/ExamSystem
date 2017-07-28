@@ -1,0 +1,17 @@
+[local]
+localhost ansible_connection=local
+
+[local-server-for-staging]
+local-server-for-staging
+
+[local-server-for-production]
+local-server-for-production
+
+[staging]
+54.222.191.27
+
+[production]
+52.80.28.196
+
+
+

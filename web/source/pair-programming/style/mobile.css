@@ -1,0 +1,114 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    background-image: none;
+}
+
+.level1-level2-level3__back-ground {
+    height: 2160%;
+}
+
+.banner {
+    height: 4%;
+}
+
+.banner__logo img {
+    width: 80%;
+}
+
+.begin__body {
+    width: 100%;
+}
+
+.video__body__watch-video-cn img {
+    left: 30%;
+    top: 13%;
+}
+
+.level3__body {
+    height: 100%;
+}
+
+.level3__background {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.foot__entry-point {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.level2__body__floor-light {
+    width: 43%;
+}
+
+.activity {
+    padding: 2rem 0;
+}
+
+.activity-detail {
+    font-size: .6rem;
+    padding: 1rem 0;
+    width: 80%;
+}
+
+.activity-detail__target {
+    font-size: .8rem;
+}
+
+.activity-detail__process {
+    padding-top: 1rem;
+    line-height: 1.2rem;
+}
+
+.activity-detail__process--end {
+    line-height: 1.2rem;
+    padding-top: 1rem;
+}
+
+.awards__header {
+    font-size: .8rem;
+    padding-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.awards {
+    padding-bottom: 2rem;
+}
+
+.awards__img {
+    width: 80%
+}
+
+.last-part-do-not-parallax {
+    position: absolute;
+    top: 1800px;
+}
+
+.about-us__tw {
+    flex: 1 0 80%;
+}
+
+.about-us__code {
+    flex: 1 0 20%;
+}
+
+.about-us__QR-Code {
+    width: 90%;
+}
+
+.books, .coaches, .about-us, .foot {
+    width: 80%;
+}
+
+.coaches {
+    padding: 6rem 0;
+}
+
+.books {
+    padding-bottom: 6rem;
+}

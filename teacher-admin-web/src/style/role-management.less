@@ -1,0 +1,135 @@
+@base-color: #555;
+
+#role-management {
+  padding: 10px 15px;
+
+  .role-management-header {
+    background-color: #438EB9;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 38px;
+    padding-left: 12px;
+    clear: right;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .role-management-body {
+    background-color: #f5f9fc;
+    margin: 0px 0px;
+  }
+
+  .role-management-list {
+    padding: 0;
+    margin-top: 10px;
+    .table-striped {
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: #E9F1F6;
+        }
+        td {
+          border: 1px solid #DDDDDD;
+          padding: 8px;
+        }
+      }
+      thead {
+        tr {
+          color: #707070;
+          background: #F2F2F2
+        }
+        th {
+          text-align: left;
+        }
+      }
+    }
+    .table-bordered {
+      margin-bottom: 0;
+    }
+  }
+
+  #role-management-editor {
+    color: @base-color;
+    .role-management-form {
+      margin-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    .error-tip {
+      padding-left: 13px;
+      color: red;
+    }
+
+    .user-role {
+      width: 20px;
+      height: 20px;
+      appearance: none;
+    }
+
+    .btn-size {
+      width: 15em;
+      height: 2.6em;
+      margin: 20px;
+    }
+  }
+  .tab-ul {
+
+    padding-top: 10px;
+    .tab-padding {
+      padding-right: 15px;
+    }
+    .stack-editor {
+      margin: 15px;
+      padding: 15px;
+      .form-control {
+        margin-top: -6px;
+      }
+    }
+  }
+  .form-footer {
+    padding: 12px;
+    margin: 0;
+    cursor: pointer;
+
+    .dataTable-pagination {
+      text-align: center;
+    }
+    .pagination {
+      margin: 0 12px;
+      display: inline-block;
+      li {
+        display: inline;
+        a {
+          border-radius: 0
+        }
+      }
+    }
+  }
+}
+
+.no-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.label {
+  cursor: default;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.label-default {
+  background-color: #f4f4f5;
+  color: #707070
+}
+
+.user-role-tab {
+  cursor: pointer;
+}
+
+.margin-border {
+  margin-top: -3px;
+  margin-bottom: 3px;
+}
+
+
+

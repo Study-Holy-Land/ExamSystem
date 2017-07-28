@@ -1,0 +1,259 @@
+/*带下划线的标题*/
+div.group-title{
+  padding: 0 10px;
+}
+
+div.group-title > hr{
+  border: none;
+  border-bottom: 1px solid #999;
+}
+
+/*群组左侧导航*/
+div.list-group > .select {
+  background-color: #f5f5f5;
+}
+
+/*群组头像Icon*/
+div.avatar {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 3px solid #eee;
+  -webkit-border-radius:100%;
+  -moz-border-radius:100%;
+  border-radius:100%;
+  overflow: hidden;
+  box-shadow: none;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+div.avatar:hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.53);
+}
+
+div.avatar > img {
+  width: 100%;
+  height: 100%;
+}
+div.avatar > span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+div.avatar > span > i{
+  font-size: 4em;
+  display: inline-block;
+  line-height: 100px;
+}
+
+/*群组事件列表组件*/
+div.user-avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 100%;
+  border: 1px solid #eee;
+  overflow: hidden;
+  box-shadow: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+div.event-info {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+div.user-avatar > img {
+  width: 100%;
+  height: 100%;
+}
+
+div.group-event a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.group-event small {
+  padding: 0 10px;
+}
+
+div.group-event p{
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+div.group-event > .discuss {
+  overflow: auto;
+  white-space: normal;
+  width: 100%
+}
+
+/*讨论主题列表*/
+
+div.discuss-subject > div.content p{
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+div.discuss-subject > .content > h5 {
+  text-align: left;
+}
+
+div.discuss-subject > .operate > a {
+  display: block;
+}
+
+div.discuss-subject > .unvisible {
+  visibility: hidden;
+}
+
+/*群组头像上传组件*/
+
+div.upload-avatar > .avatar {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+div.upload-avatar {
+  position: relative;
+}
+
+div.upload-avatar > .upload {
+  text-align: center;
+  background-color: rgba(238, 238, 238, 0.68);
+  width: 100px;
+  color: #6B6B6B;
+  position: absolute;
+  top: 100px;
+}
+
+div.upload-avatar > .upload a {
+  color: inherit;
+}
+
+/*题型按钮*/
+
+div.dashboard-icon{
+  max-width: 460px;
+  margin: 10px auto;
+  min-width: 300px;
+  text-align: center;
+
+}
+
+div.dashboard-icon a {
+  display: block;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+div.dashboard-icon > .icon-view {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+div.dashboard-icon .icon {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgb(62, 62, 62);
+}
+
+div.dashboard-icon .icon > .icon-img {
+  margin-top: 20px;
+}
+
+div.dashboard-icon .icon > .icon-img span {
+  font-size: 80px;
+  color: #337ab7;
+}
+
+div.dashboard-icon .icon > .icon-name {
+  color: #337ab7;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 7px 15px rgba(0,0,0,0.25);
+  margin-top: 11px;
+}
+
+div.dashboard-icon .icon > .icon-bottom {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding:10px;
+  font-size: 15px;
+}
+
+div.dashboard-icon .icon > .icon-bottom > .published-option a{
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/*新增章节按钮*/
+
+div.dashboard-icon .icon > .icon-add {
+  height: 191px;
+  line-height: 230px;
+}
+
+/*试卷相关组件*/
+div.paper-button {
+  height: 220px;
+  width: 270px;
+  position: relative;
+  border: 10px solid #eee;
+  border-radius: 3px;
+  padding: 15px 0;
+  overflow: hidden;
+  font-size: 15px;
+  margin: 0 5px;
+}
+div.paper-button >h3{
+  margin:0;
+}
+div.button-buttom{
+  padding-top: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: right;
+  border-top: 1px solid #ccc;
+  padding-right: 10px;
+}
+div.dashboard-icon{
+  max-width: 460px;
+  margin: 0 auto;
+  min-width: 300px;
+}
+div.paper-add-button {
+  border: 2px solid grey;
+  border-radius: 3px;
+  text-align: center;
+}
+div.add-button {
+  padding: 15px 0px;
+}
+div.paper-button > i{
+  line-height: 175px;
+}
+
+/* 内容讨论框*/
+div.discuss-part {
+  margin-bottom: 10px;
+}
+div.discuss-content {
+  height: 100px;
+  border: 1px solid #ccc;
+  border-top: none;
+}

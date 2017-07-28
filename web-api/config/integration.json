@@ -1,0 +1,14 @@
+{
+  "task": {
+    "taskApi": "http://localhost:12306/job/HOMEWORK-SCORING/buildWithParameters",
+    "getJenkinsLogs": "http://localhost:12306/job/"
+  },
+  "nginxServer": "http://localhost:12306/nginx",
+  "database": "mongodb://localhost/twars",
+  "paperApiServer": "http://localhost:12306/",
+  "sendCloud":{
+    "api_user": "Youruyu0310_test_ix0A9V",
+    "api_key":"JrfJtutsE5z9J9O1",
+    "source":"18829290140@163.com"
+  }
+}

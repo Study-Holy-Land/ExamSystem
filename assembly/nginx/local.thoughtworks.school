@@ -1,0 +1,43 @@
+# HTTPS server
+
+server {
+    listen 443 ssl;
+    server_name  local.thoughtworks.school;
+
+    ssl on;
+	# 修改为你的 ssl 文件夹地址
+    ssl_certificate     /usr/local/etc/nginx/ssl/learn.thoughtworks.school.crt;  
+    ssl_certificate_key /usr/local/etc/nginx/ssl/learn.thoughtworks.school.key;  
+
+
+    server_name_in_redirect off;
+
+    # ssl_certificate      cert.pem;
+    # ssl_certificate_key  cert.key;
+    # ssl_session_cache    shared:SSL:1m;
+    # ssl_session_timeout  5m;
+    # ssl_ciphers  HIGH:!aNULL:!MD5;
+    # ssl_prefer_server_ciphers  on;
+
+    location / {
+		# 修改为你的项目地址
+        alias /Users/wjlin/works/coach/056-recruiting-system/web/public/assets/;	
+    }
+
+    location /api {
+        rewrite /api/(.+)$ /$1 break;
+        proxy_pass http://localhost:3000;
+    }
+
+    location /admin {
+		# 修改为你的项目地址
+        root /Users/wjlin/works/coach/056-recruiting-system/teacher-admin-web/public/assets/;   	
+	    rewrite "^(.*)$" "/index.html" break;
+    }
+
+    location ~ "^/admin(.*)\.(js|css|map|png|woff2|ttf)$" {
+		# 修改为你的项目地址
+        root /Users/wjlin/works/coach/056-recruiting-system/teacher-admin-web/public/assets/;      	
+		rewrite ^/admin/(.*)$ /$1 break;
+    }
+}

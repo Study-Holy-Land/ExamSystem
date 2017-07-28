@@ -1,0 +1,277 @@
+@import "common/main";
+
+.header-major;
+
+#paper-list {
+  h4 {
+    font-size: 20px;
+    margin: 35px 0 18px 20px;
+    color: #4d4d4d;
+    font-weight: 700;
+  }
+  .fa-group {
+    color: #999;
+    margin-right: 15px;
+  }
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .list-item-enable {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0 2px 0 0;
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    min-height: 90px;
+    background-color: @white;
+
+    .icon-box {
+
+      .fa {
+        text-align: center;
+        font-size: 50px;
+        color: #FFFFFF;
+        height: 90px;
+        line-height: 90px;
+        padding-left: -5px;
+      }
+    }
+    .paper-box {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .paper-name, .quizzes, .progress-description {
+      color: #FFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0;
+    }
+    .paper-name {
+      font-size: 14px;
+    }
+    .quizzes {
+      font-size: 14px;
+    }
+    .progress-description {
+      font-size: 13px;
+    }
+    .progress {
+      background: rgba(0, 0, 0, 0.2);
+      margin: 5px -16px 5px -15px;
+      height: 2px;
+
+      .progress-bar {
+        float: left;
+        width: 50%;
+        height: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+        background: #fff;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .list-item-disable {
+    box-sizing: border-box;
+    padding: 0 2px 0 0;
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    min-height: 90px;
+    background-color: @white;
+
+    .icon-box {
+
+      .fa {
+        text-align: center;
+        font-size: 50px;
+        color: #FFFFFF;
+        height: 90px;
+        line-height: 90px;
+        padding-left: -5px;
+      }
+    }
+    .paper-box {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .paper-name, .quizzes, .progress-description {
+      color: #FFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0;
+    }
+    .paper-name {
+      font-size: 14px;
+    }
+    .quizzes {
+      font-size: 14px;
+    }
+    .progress-description {
+      font-size: 13px;
+    }
+    .progress {
+      background: rgba(0, 0, 0, 0.2);
+      margin: 5px -16px 5px -15px;
+      height: 2px;
+
+      .progress-bar {
+        float: left;
+        width: 50%;
+        height: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+        background: #fff;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .input {
+    margin-top: 10px;
+    .row {
+      margin: 0;
+    }
+    a {
+      height: 30px;
+      line-height: 30px;
+    }
+    .btn-success {
+      margin-left: 25px;
+    }
+  }
+
+  .btn {
+    background-color: @blue;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .paper-rate {
+    .rate-chart {
+      display: inline-block;
+      width: 50%;
+      position: relative;
+
+      .paper-rate-text {
+        position: absolute;
+        top: 20px;
+        left: 24px;
+
+        .rate-number {
+          color: @blue;
+          font-size: 16px
+        }
+        .assist-text {
+          font-size: 10px;
+        }
+      }
+    }
+    .rate-data {
+      display: inline-block;
+      position: relative;
+      width: 50%;
+
+      .rate-data-content {
+        position: absolute;
+        top: -25px;
+        .finished-section {
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: @blue;
+        }
+
+        .finished-text {
+          display: inline-block;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+
+        .total-section {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background: #555;
+        }
+      }
+
+    }
+  }
+
+  .homework-title {
+    margin: 20px 0;
+    height: 120px;
+    border: 1px solid @translucent-black;
+
+    .title-header {
+      border-bottom: 1px solid @translucent-black;
+      font-size: 15px;
+    }
+    .no-margin {
+      margin: 10px;
+    }
+
+    .paper-name-size {
+      margin-left: 5px;
+    }
+  }
+
+  .hover-text {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    opacity: 0;
+    height: 75%;
+    text-align: center;
+    &:hover {
+      background: @shallow-blue;
+      opacity: 1;
+      p {
+        opacity: 1;
+        color: #555;
+        width: 100%;
+      }
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -20%, 0);
+      opacity: 0;
+    }
+  }
+}
+
+.btn-success {
+  background-color: #629B58 !important;
+  border-color: #87B87F;
+  margin-right: 10px;
+}
+
+.icon-on-right {
+  padding-left: 10px;
+}
+
+.red {
+  color: #DD5A43;;
+}

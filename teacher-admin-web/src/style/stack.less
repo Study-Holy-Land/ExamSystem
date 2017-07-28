@@ -1,0 +1,130 @@
+.stack {
+  padding: 10px 15px;
+
+  .stack-header {
+    background-color: #438EB9;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 38px;
+    padding-left: 12px;
+    clear: right;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .stack-body {
+    background-color: #EFF3F8;
+    margin: 0;
+    padding-bottom: 15px;
+
+    .stack-table {
+      background-color: #ffffff;
+      margin-top: 10px;
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: #E9F1F6;
+          th {
+            text-align: center;
+            font-weight: normal;
+          }
+        }
+        th {
+          text-align: center;
+          font-weight: normal;
+          .success {
+            color: green;
+          }
+          .fail {
+            color: red;
+          }
+          .building {
+            @keyframes flashing {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+
+            @-webkit-keyframes flashing {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+
+            @-moz-keyframes flashing {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+
+            @-o-keyframes flashing {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+            animation: flashing 2s infinite;
+            -webkit-animation: flashing 2s infinite;
+            -moz-animation: flashing 2s infinite;
+            -o-animation: flashing 2s infinite;
+          }
+        }
+      }
+      thead {
+        th {
+          text-align: center;
+        }
+        color: #707070;
+        background-color: #F2F2F2;
+      }
+    }
+
+    .warning-message {
+      display: none;
+    }
+
+    .add-stack-result {
+      background: #f5f5f5;
+      white-space: pre-line;
+      border: 2px solid #e3e3e3;
+      height: 300px;
+      padding: 10px;
+      overflow: auto;
+      i {
+        margin: 5px;
+        font-size: 20px;
+      }
+    }
+
+    .stack-editor {
+      padding: 10px;
+    }
+  }
+
+  .error-tip {
+    padding-left: 13px;
+    color: red;
+  }
+
+}

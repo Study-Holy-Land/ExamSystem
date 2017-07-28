@@ -1,0 +1,341 @@
+[
+  {
+    "description": "should_return_detail_by_user_id",
+    "request": {
+      "uri": "/users/1/detail",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "schoolCity": "西安",
+        "role": [
+          0,
+          1
+        ],
+        "gender": "F",
+        "degree": "本科",
+        "userName": "章三",
+        "userId": 1,
+        "schoolProvince": "陕西",
+        "mobilePhone": "18798037893",
+        "major": "计算机",
+        "school": "思沃学院",
+        "entranceYear": "2016",
+        "name": "测试一",
+        "id": 1,
+        "email": "test@163.com"
+      }
+    }
+  },
+  {
+    "description": "should_modify_user_detail",
+    "request": {
+      "uri": "/users/1/detail",
+      "method": "put",
+      "json": {
+        "userId": 1,
+        "name": "测试一",
+        "school": "思沃学院",
+        "gender": "F",
+        "major": "计算机",
+        "degree": "本科",
+        "schoolProvince": "陕西省",
+        "schoolCity": "西安市"
+      }
+    },
+    "response": {
+      "json": {
+        "uri": "userDetail/1"
+      }
+    }
+  },
+  {
+    "description": "should_return_user_list",
+    "request": {
+      "uri": "/users/1,1,1,1,1,1,1,1/detail",
+      "method": "get"
+    },
+    "response": {
+      "status": 200,
+      "json":{
+        "userList": [
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "should_return_user_list",
+    "request": {
+      "uri": "/users/1,1,1/detail",
+      "method": "get"
+    },
+    "response": {
+      "status": 200,
+      "json":{
+        "userList": [
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "should_return_user_list",
+    "request": {
+      "uri": "/users/1,1/detail",
+      "method": "get"
+    },
+    "response": {
+      "status": 200,
+      "json":{
+        "userList": [
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          },
+          {
+            "degree": "本科",
+            "email": "test@163.com",
+            "entranceYear": "2016",
+            "gender": "F",
+            "id": 1,
+            "major": "计算机",
+            "mobilePhone": "18798037893",
+            "name": "测试一",
+            "role": [
+              0,
+              1
+            ],
+            "school": "思沃学院",
+            "schoolCity": "西安",
+            "schoolProvince": "陕西",
+            "userId": 1,
+            "userName": "章三"
+          }
+        ]
+      }
+    }
+  }
+]

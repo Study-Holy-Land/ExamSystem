@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="config.properties"/>
+    <environments default="default">
+        <environment id="default">
+            <transactionManager type="JDBC"/>
+            <dataSource type="com.thoughtworks.twars.util.C3P0DataSourceFactory">
+                <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+                <property name="jdbcUrl"
+                          value="${jdbc.url}"/>
+                <property name="user" value="${jdbc.user}"/>
+                <property name="password" value="${jdbc.password}"/>
+                <property name="idleConnectionTestPeriod" value="60"/>
+                <property name="maxPoolSize" value="20"/>
+                <property name="maxIdleTime" value="600"/>
+                <property name="preferredTestQuery" value="SELECT 1"/>
+            </dataSource>
+        </environment>
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.user}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+        <environment id="ci_test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="${jdbc.ci.url}"/>
+                <property name="username" value="${jdbc.user}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper class="com.thoughtworks.twars.mapper.UserMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.QuizItemMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.BasicBlankQuizMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.PaperMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.BlankQuizMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.SectionMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.SectionQuizMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.ScoreSheetMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.BlankQuizSubmitMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.ItemPostMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.HomeworkQuizMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.HomeworkSubmitMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.HomeworkPostHistoryMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.PasswordRetrieveDetailMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.LoginDetailMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.ThirdPartyMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.PaperOperationMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.ProgramMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.StackMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.PaperAndOperationMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.HomeworkQuizOperationMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.SingleChoiceMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.MultipleChoiceMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.BasicQuizMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.BasicQuizPostHistoryMapper"/>
+        <mapper class="com.thoughtworks.twars.mapper.BasicQuizSubmitMapper"/>
+    </mappers>
+</configuration>

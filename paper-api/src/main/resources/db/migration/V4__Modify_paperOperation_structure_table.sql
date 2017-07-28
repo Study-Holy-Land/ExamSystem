@@ -1,0 +1,2 @@
+ALTER TABLE paperOperation DROP COLUMN operationType;
+ALTER TABLE paperOperation ADD COLUMN operationType enum('DELETE','DISTRIBUTION','UNDISTRIBUTION') DEFAULT NULL

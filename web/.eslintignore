@@ -1,0 +1,7 @@
+webpack.config.js
+spec/*
+public/*
+node_modules/*
+source/scripts/libs/*
+source/pair-programming/*
+
